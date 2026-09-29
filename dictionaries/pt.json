@@ -1,0 +1,698 @@
+{
+  "meta": {
+    "siteName": "Brazilian Business Network",
+    "defaultDescription": "Rede de empreendedores brasileiros que conecta pessoas, capacita negócios e cria oportunidades. Eventos, reuniões mensais e treinamentos para membros.",
+    "pages": {
+      "home": {
+        "title": "Brazilian Business Network — Rede de empreendedores brasileiros",
+        "description": "Conectar pessoas. Desenvolver negócios. Criar oportunidades. Transformar vidas. Conheça o BBN, a rede que forma empreendedores brasileiros por inteiro."
+      },
+      "sobre": {
+        "title": "Sobre o BBN — Propósito, visão e cultura",
+        "description": "Não construímos apenas negócios. Construímos pessoas que constroem negócios. Conheça o propósito, a visão e a cultura da Brazilian Business Network."
+      },
+      "comoFunciona": {
+        "title": "Como funciona — Eventos, reuniões e treinamentos",
+        "description": "Três pilares sustentam o BBN: eventos duas vezes por ano, reuniões mensais em português e treinamentos trimestrais exclusivos para membros."
+      },
+      "membresia": {
+        "title": "Membresia — Faça parte do BBN",
+        "description": "Membresia anual de US$ 150 por pessoa, sujeita a análise e aprovação. Veja a jornada do membro, as diretrizes da rede e envie sua candidatura."
+      },
+      "eventos": {
+        "title": "Eventos BBN — Encontros, fotos e vídeos",
+        "description": "O BBN se reúne duas vezes por ano, em março e setembro. Veja o próximo encontro e revisite as fotos e os vídeos das edições anteriores."
+      },
+      "parceiros": {
+        "title": "Parceiros — Hub de relacionamentos do BBN",
+        "description": "Parcerias com outros estados e com o Brasil, podcasts, jornais, influenciadores, espaços para eventos e ideias fora da caixa. Proponha a sua."
+      },
+      "lideranca": {
+        "title": "Liderança — Líderes desenvolvem líderes",
+        "description": "Sete líderes conduzem o primeiro ano do BBN: um Líder Geral e dois por pilar. Conheça o ciclo de planejar, delegar, executar e avaliar."
+      },
+      "contato": {
+        "title": "Contato — Fale com o BBN",
+        "description": "Fale com a liderança do BBN pelo formulário de contato ou pelo Instagram e Facebook. Respondemos a candidaturas, propostas de parceria e convites para eventos."
+      },
+      "privacidade": {
+        "title": "Política de Privacidade — Brazilian Business Network",
+        "description": "Saiba quais dados o BBN coleta nos formulários do site, para que usa, com quem compartilha e como pedir acesso, correção ou exclusão das suas informações."
+      }
+    }
+  },
+  "nav": {
+    "home": "Início",
+    "sobre": "Sobre",
+    "comoFunciona": "Como funciona",
+    "membresia": "Membresia",
+    "eventos": "Eventos",
+    "parceiros": "Parceiros",
+    "lideranca": "Liderança",
+    "contato": "Contato",
+    "privacidade": "Política de Privacidade",
+    "sobreGroupLabel": "Conheça o BBN",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "skipToContent": "Ir para o conteúdo principal",
+    "langToggleLabel": "Mudar idioma",
+    "langPt": "Português",
+    "langEn": "English",
+    "menuLabel": "Menu principal",
+    "mobileMenuLabel": "Navegação do site",
+    "openSubmenu": "Abrir submenu {label}"
+  },
+  "common": {
+    "becomeMember": "Seja membro",
+    "nextEvent": "Próximo evento",
+    "learnMore": "Saiba mais",
+    "seeAll": "Ver todos",
+    "backToEvents": "Voltar para eventos",
+    "followUs": "Siga o BBN",
+    "viewOnInstagram": "Ver no Instagram",
+    "instagramAria": "Instagram do BBN (abre em nova aba)",
+    "facebookAria": "Facebook do BBN (abre em nova aba)",
+    "perYear": "por ano",
+    "perPerson": "por pessoa",
+    "leaders": "Líderes",
+    "frequency": "Frequência",
+    "registerSpot": "Garantir minha vaga",
+    "registerSpotAria": "Garantir minha vaga no próximo evento (abre em nova aba)",
+    "visitMeeting": "Quero visitar uma reunião",
+    "whatsappFloatAria": "Falar com o BBN no WhatsApp (abre em nova aba)",
+    "opensNewTab": "(abre em nova aba)"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Rede de empreendedores brasileiros",
+      "title": "O lugar onde o empreendedor brasileiro cresce acompanhado",
+      "tagline": "Conectar pessoas. Desenvolver negócios. Criar oportunidades. Transformar vidas.",
+      "intro": "Empreender longe de casa não precisa ser solitário. O BBN reúne empreendedores brasileiros que trocam contatos, aprendem juntos e abrem portas uns para os outros — em português, entre pessoas que entendem o seu caminho."
+    },
+    "purpose": {
+      "label": "Propósito",
+      "title": "Ideias viram negócios. Negócios viram oportunidades.",
+      "body": "Existimos para conectar, capacitar e impulsionar empreendedores brasileiros: transformar ideias em negócios, negócios em oportunidades e oportunidades em impacto. Cada encontro serve a esse movimento — nada acontece por acaso na nossa agenda.",
+      "visionLabel": "Visão",
+      "vision": "Construir a maior e mais relevante rede de empreendedores brasileiros."
+    },
+    "movements": {
+      "label": "O que fazemos",
+      "title": "Cinco movimentos, um só caminho",
+      "intro": "Do primeiro aperto de mão ao impacto que fica na comunidade, o BBN acompanha o empreendedor em cinco frentes que se sustentam entre si."
+    },
+    "pillars": {
+      "label": "Como funciona",
+      "title": "Três pilares que sustentam a rede",
+      "intro": "Eventos que reúnem todo mundo, reuniões que mantêm o vínculo vivo e treinamentos que aprofundam a prática. Cada pilar tem dois líderes responsáveis."
+    },
+    "photos": {
+      "label": "Galeria",
+      "title": "A rede em movimento",
+      "intro": "Salas cheias, conversas que rendem negócios e pessoas que chegaram sozinhas e saíram com parceiros. Veja como são os nossos encontros.",
+      "empty": "As primeiras fotos chegam logo depois do próximo encontro. Acompanhe o BBN no Instagram para ver antes de todos.",
+      "photoAlt": "Foto de evento do BBN {n}"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "title": "Acompanhe nossos eventos",
+      "intro": "Fotos dos encontros, bastidores das reuniões e o anúncio de cada nova data saem primeiro no @bbn_usa. Siga e fique por dentro.",
+      "photoAlt": "Foto de evento do BBN {n}",
+      "ctaLabel": "Abrir o Instagram do BBN em uma nova aba"
+    },
+    "visit": {
+      "label": "Visite uma reunião",
+      "title": "Conheça a rede antes de decidir",
+      "body": "Todo mês a rede se reúne, em português, para apresentar negócios e trocar indicações. Convidados podem participar de até duas reuniões antes de se tornar membros — venha sentir o clima de perto.",
+      "button": "Quero visitar uma reunião"
+    },
+    "cta": {
+      "title": "Sua próxima grande parceria já está na sala",
+      "body": "A membresia é anual e passa por análise e aprovação — queremos gente comprometida em contribuir, não apenas em assistir. Envie sua candidatura e vamos conversar.",
+      "button": "Seja membro"
+    }
+  },
+  "sobre": {
+    "hero": {
+      "label": "Sobre o BBN",
+      "title": "Uma rede construída sobre pessoas",
+      "intro": "A Brazilian Business Network nasceu de uma convicção simples: empreendedor brasileiro bem acompanhado vai mais longe. Somos uma comunidade de donos de negócio que se encontram, se capacitam e se recomendam — com intenção, em português e sem falsa competição."
+    },
+    "purpose": {
+      "label": "Propósito",
+      "title": "Conectar, capacitar e impulsionar",
+      "body": "Conectamos empreendedores brasileiros, capacitamos com conteúdo prático e impulsionamos quem está pronto para o próximo passo. O objetivo é sempre o mesmo: transformar ideias em negócios, negócios em oportunidades e oportunidades em impacto real na vida das pessoas."
+    },
+    "vision": {
+      "label": "Visão",
+      "title": "A maior e mais relevante rede de empreendedores brasileiros",
+      "body": "Relevante antes de grande. Queremos ser a rede que o empreendedor brasileiro procura quando precisa de um parceiro de confiança, de uma indicação honesta ou de alguém que já resolveu o problema que ele está enfrentando agora."
+    },
+    "belief": {
+      "label": "No que acreditamos",
+      "quote": "Não construímos apenas negócios. Construímos pessoas que constroem negócios.",
+      "attribution": "Brazilian Business Network"
+    },
+    "whole": {
+      "label": "Desenvolvimento integral",
+      "title": "O empreendedor por inteiro",
+      "intro": "Ninguém separa a vida do negócio. Por isso olhamos para cinco dimensões do empreendedor — quando uma delas fica para trás, o negócio sente."
+    },
+    "dimensions": {
+      "mente": {
+        "title": "Mente",
+        "body": "Clareza para decidir e disciplina para aprender. Cultivamos leitura, mentoria e discussão honesta sobre erros e acertos."
+      },
+      "corpo": {
+        "title": "Corpo",
+        "body": "Energia é insumo de trabalho. Sono, movimento e alimentação sustentam a rotina de quem carrega um negócio nas costas."
+      },
+      "espirito": {
+        "title": "Espírito",
+        "body": "Propósito e princípios antes do lucro. Cuidamos da vida interior que sustenta decisões difíceis e mantém o caráter no lugar."
+      },
+      "relacionamentos": {
+        "title": "Relacionamentos",
+        "body": "Família, sócios, equipe e clientes. Negócio saudável raramente sobrevive a relações desgastadas — aqui isso se fala em voz alta."
+      },
+      "negocios": {
+        "title": "Negócios",
+        "body": "Gestão, vendas, finanças e crescimento. A prática do dia a dia, tratada com quem já passou pelo mesmo desafio."
+      }
+    },
+    "culture": {
+      "label": "Cultura",
+      "title": "Como nos comportamos na rede",
+      "intro": "Cultura não é discurso de parede. São seis comportamentos que você reconhece na primeira reunião a que participa."
+    },
+    "cultureValues": {
+      "contribuicao": {
+        "title": "Contribuição primeiro",
+        "body": "Quem chega perguntando como pode ajudar sai com mais do que quem chega vendendo. Entregar antes de pedir é o jeito BBN."
+      },
+      "relacionamento": {
+        "title": "Relacionamento antes do negócio",
+        "body": "Primeiro a confiança, depois a proposta. Indicação só vale quando você colocaria o seu nome junto."
+      },
+      "crescimento": {
+        "title": "Crescimento constante",
+        "body": "Ninguém chega pronto. Cada evento, reunião e treinamento existe para você sair diferente de como entrou."
+      },
+      "oportunidades": {
+        "title": "Oportunidades mútuas",
+        "body": "O ganho de um abre caminho para o outro. Trocamos clientes, fornecedores, contatos e aprendizados sem guardar carta na manga."
+      },
+      "voluntariado": {
+        "title": "Voluntariado",
+        "body": "A rede funciona porque gente comum doa tempo. Servir como voluntário é o primeiro passo natural de quem quer crescer aqui."
+      },
+      "intencionalidade": {
+        "title": "Intencionalidade",
+        "body": "Nada de encontro sem objetivo. Cada agenda, convite e conversa tem um motivo claro e um próximo passo definido."
+      }
+    }
+  },
+  "movements": {
+    "conectar": {
+      "title": "Conectar",
+      "body": "Aproximamos empreendedores brasileiros que dificilmente se encontrariam. Conexão com nome, rosto e contexto — não lista de contatos."
+    },
+    "capacitar": {
+      "title": "Capacitar",
+      "body": "Treinamentos e conteúdo prático sobre gestão, vendas e finanças, conduzidos por quem já aplicou no próprio negócio."
+    },
+    "impulsionar": {
+      "title": "Impulsionar",
+      "body": "Quem tem uma ideia pronta encontra aqui o empurrão que faltava: parceiros, indicações e gente disposta a abrir a primeira porta."
+    },
+    "desenvolver": {
+      "title": "Desenvolver",
+      "body": "Crescer com consistência, não por sorte. Acompanhamos o negócio ao longo do ano, de reunião em reunião."
+    },
+    "impacto": {
+      "title": "Gerar impacto",
+      "body": "Negócio forte gera emprego, sustenta famílias e fortalece a comunidade brasileira ao redor. É onde toda a jornada desemboca."
+    }
+  },
+  "pillars": {
+    "eventos": {
+      "title": "Eventos",
+      "frequency": "2x por ano — março e setembro",
+      "body": "Dois grandes encontros por ano reúnem a rede inteira: conteúdo, conexões e o momento em que quem é de fora conhece o BBN de perto."
+    },
+    "reunioes": {
+      "title": "Reuniões",
+      "frequency": "Mensais, em português",
+      "body": "Todo mês a rede se senta junto, em português, para apresentar negócios, trocar indicações e resolver problemas reais em discussão aberta."
+    },
+    "treinamentos": {
+      "title": "Treinamentos",
+      "frequency": "Trimestrais, exclusivos para membros",
+      "body": "Quatro vezes ao ano, encontros de formação só para membros: conteúdo aprofundado, prático e aplicável na semana seguinte."
+    }
+  },
+  "comoFunciona": {
+    "hero": {
+      "label": "Como funciona",
+      "title": "Uma agenda simples e constante",
+      "intro": "O BBN se organiza em três pilares, cada um com dois líderes responsáveis. Juntos, eles mantêm a rede ativa o ano inteiro: eventos que reúnem todos, reuniões que aproximam e treinamentos que aprofundam."
+    },
+    "visit": {
+      "label": "Visite uma reunião",
+      "title": "Sente-se à mesa como convidado",
+      "intro": "O jeito mais fácil de entender o BBN é participar de uma reunião mensal. Preencha o formulário e a liderança entra em contato com os detalhes da próxima reunião.",
+      "guestRule": "Convidados podem participar de até duas reuniões mensais antes de se tornar membros, e as reuniões são em português.",
+      "formTitle": "Solicite sua visita"
+    },
+    "outro": {
+      "title": "Pronto para sentar à mesa?",
+      "body": "Visitantes podem participar de até duas reuniões antes de se tornar membros — tempo suficiente para conhecer a rede e decidir com calma. Depois disso, é hora de fazer parte.",
+      "button": "Seja membro"
+    }
+  },
+  "membresia": {
+    "hero": {
+      "label": "Membresia",
+      "title": "Faça parte da rede",
+      "intro": "Ser membro do BBN é ter um grupo de empreendedores brasileiros comprometidos com o seu crescimento durante todo o ano: reuniões mensais, treinamentos exclusivos, parcerias e a chance de sair de membro para líder."
+    },
+    "price": {
+      "label": "Investimento",
+      "amount": "US$ 150",
+      "unit": "por pessoa / ano",
+      "note": "A membresia está sujeita a análise e aprovação. Enviar a candidatura não gera cobrança: conversamos primeiro."
+    },
+    "approval": {
+      "label": "Processo",
+      "title": "Como funciona a aprovação",
+      "intro": "Aprovamos por afinidade de valores, não por faturamento. Quatro passos simples, sem burocracia."
+    },
+    "approvalSteps": {
+      "candidatura": {
+        "title": "Candidatura",
+        "body": "Você preenche o formulário contando quem é, o que faz e o que espera da rede. Leva poucos minutos."
+      },
+      "conversa": {
+        "title": "Conversa",
+        "body": "Um líder do BBN entra em contato para uma conversa aberta sobre o seu negócio, suas expectativas e o jeito como a rede funciona."
+      },
+      "analise": {
+        "title": "Análise",
+        "body": "A liderança avalia se há espaço e alinhamento de valores. Você recebe a resposta de qualquer forma, com clareza."
+      },
+      "boasVindas": {
+        "title": "Boas-vindas",
+        "body": "Aprovado, você é apresentado à rede, entra no grupo de membros e já é esperado na próxima reunião mensal."
+      }
+    },
+    "journey": {
+      "label": "Jornada",
+      "title": "De convidado a líder",
+      "intro": "Ninguém precisa chegar pronto. Este é o caminho que a maioria dos membros percorre dentro do BBN."
+    },
+    "journeySteps": {
+      "evento": "Você participa de um evento e sente o clima da rede.",
+      "conhece": "Conhece o BBN: propósito, pilares e as pessoas por trás.",
+      "membro": "Torna-se membro depois da candidatura e da conversa com a liderança.",
+      "reunioes": "Entra nas reuniões mensais e passa a ser conhecido pelo nome.",
+      "treinamentos": "Participa dos treinamentos trimestrais, exclusivos para membros.",
+      "parceiros": "Acessa parceiros e oportunidades dentro e fora do seu estado.",
+      "desenvolve": "Desenvolve o negócio com apoio constante de quem já passou por ali.",
+      "contribui": "Passa a contribuir: indica, ensina e abre portas para os outros.",
+      "lidera": "Serve como voluntário e assume a liderança de uma frente da rede."
+    },
+    "guidelines": {
+      "label": "Diretrizes",
+      "title": "Combinados da comunidade",
+      "intro": "Cinco acordos mantêm o ambiente seguro e o foco no lugar certo. Todo membro conhece e sustenta cada um deles."
+    },
+    "guidelineItems": {
+      "semPolitica": {
+        "title": "Sem política",
+        "body": "Não há espaço para pauta partidária nos nossos encontros. O foco é negócio, desenvolvimento e relacionamento."
+      },
+      "principiosCristaos": {
+        "title": "Princípios cristãos, sem denominação",
+        "body": "Nossos valores têm base cristã e a rede não é ligada a nenhuma denominação. Todos são bem-vindos, com respeito mútuo."
+      },
+      "portugues": {
+        "title": "Reuniões em português",
+        "body": "As reuniões acontecem em português, para que cada um se expresse com naturalidade e ninguém fique de fora da conversa."
+      },
+      "convidados": {
+        "title": "Convidados: até duas reuniões",
+        "body": "Quem ainda não é membro pode participar de até duas reuniões. Depois disso, é hora de se tornar membro para continuar."
+      },
+      "treinamentosMembros": {
+        "title": "Treinamentos só para membros",
+        "body": "Os treinamentos trimestrais são exclusivos de quem é membro — é o benefício mais direto da membresia."
+      }
+    },
+    "faq": {
+      "label": "Dúvidas",
+      "title": "Perguntas frequentes"
+    },
+    "faqItems": {
+      "valor": {
+        "q": "Quanto custa a membresia?",
+        "a": "US$ 150 por pessoa por ano. O valor cobre a participação nas reuniões mensais e o acesso aos treinamentos trimestrais exclusivos para membros."
+      },
+      "quemPode": {
+        "q": "Quem pode ser membro do BBN?",
+        "a": "Empreendedores brasileiros que já têm um negócio ou estão tirando um do papel e querem crescer contribuindo com os outros. Comprometimento pesa mais que tamanho de empresa."
+      },
+      "aprovacao": {
+        "q": "Por que a membresia passa por aprovação?",
+        "a": "Porque a força da rede está na confiança entre as pessoas. A conversa com a liderança garante alinhamento de valores antes da entrada."
+      },
+      "convidado": {
+        "q": "Posso visitar antes de decidir?",
+        "a": "Sim. Convidados podem participar de até duas reuniões antes de se tornar membros. É o melhor jeito de conhecer a rede por dentro."
+      },
+      "idioma": {
+        "q": "Em que idioma acontecem os encontros?",
+        "a": "As reuniões são em português. O site tem versão em inglês para que você possa apresentar o BBN a parceiros e convidados."
+      },
+      "treinamentos": {
+        "q": "Os treinamentos estão incluídos?",
+        "a": "Sim. São quatro por ano, exclusivos para membros, com conteúdo prático de gestão, vendas, finanças e liderança."
+      },
+      "politica": {
+        "q": "Por que não se fala de política?",
+        "a": "Para proteger o que nos une. Sem pauta partidária, a discussão fica onde interessa a todos: negócios, desenvolvimento e relacionamento."
+      },
+      "voluntariado": {
+        "q": "Como me torno voluntário ou líder?",
+        "a": "Contribuindo. Membros que servem de forma consistente são convidados a atuar como voluntário e, com o tempo, a liderar uma frente da rede."
+      }
+    },
+    "form": {
+      "label": "Candidatura",
+      "title": "Envie sua candidatura",
+      "intro": "Conte quem você é e o que busca na rede. Um líder do BBN entra em contato para conversar — sem compromisso e sem cobrança nesta etapa."
+    }
+  },
+  "eventos": {
+    "hero": {
+      "label": "Eventos",
+      "title": "Duas vezes por ano, a rede inteira na mesma sala",
+      "intro": "Os encontros do BBN acontecem em março e setembro. São os dias em que membros, convidados e parceiros se reúnem para aprender, apresentar negócios e firmar as conexões que sustentam o ano."
+    },
+    "upcoming": {
+      "label": "Agenda",
+      "title": "Próximo encontro",
+      "tbd": "data e local em breve",
+      "followCta": "Siga o @bbn_usa e receba o anúncio da data e do local antes de todo mundo."
+    },
+    "past": {
+      "label": "Histórico",
+      "title": "Edições anteriores",
+      "intro": "Revisite os encontros que já aconteceram: fotos, vídeos e o registro de quem estava lá.",
+      "empty": "Ainda não há edições anteriores por aqui. O primeiro registro chega logo depois do próximo encontro."
+    },
+    "gallery": {
+      "label": "Galeria",
+      "photosTitle": "Fotos",
+      "videosTitle": "Vídeos",
+      "empty": "As fotos desta edição ainda estão sendo organizadas. Volte em breve.",
+      "photoAlt": "{title} — foto {n}",
+      "openPhoto": "Abrir foto {n} em tela cheia",
+      "lightboxTitle": "Galeria: {title}",
+      "viewGallery": "Ver galeria",
+      "coverAlt": "Capa do evento {title}",
+      "emptyHint": "Acompanhe o @bbn_usa para ver as fotos assim que saírem.",
+      "videosEyebrow": "Assista"
+    },
+    "instagramNote": "Mais fotos e vídeos no Instagram: {handle}",
+    "lightbox": {
+      "open": "Ampliar foto",
+      "close": "Fechar",
+      "previous": "Foto anterior",
+      "next": "Próxima foto",
+      "counter": "{current} de {total}",
+      "playVideo": "Assistir vídeo"
+    },
+    "instagramLinkLabel": "Abrir o Instagram do BBN em uma nova aba"
+  },
+  "parceiros": {
+    "hero": {
+      "label": "Parceiros",
+      "title": "Rede que se abre para fora",
+      "intro": "O BBN cresce junto com quem caminha ao lado: empresas, veículos de comunicação, espaços e comunidades brasileiras em outros estados e no Brasil. Parceria aqui é troca de valor real, nos dois sentidos."
+    },
+    "hub": {
+      "label": "Hub de relacionamentos",
+      "title": "Quatro frentes de parceria",
+      "intro": "Cada frente amplia o alcance da rede e abre oportunidades concretas para os nossos membros."
+    },
+    "types": {
+      "outrosEstados": {
+        "title": "Outros estados e Brasil",
+        "body": "Grupos e lideranças brasileiras em outros estados americanos e no Brasil, para que uma conexão feita aqui renda negócio lá."
+      },
+      "parceirosLocais": {
+        "title": "Parceiros locais",
+        "body": "Podcasts, jornais e influenciadores que contam a história dos empreendedores brasileiros e levam a rede a mais gente."
+      },
+      "espacos": {
+        "title": "Espaços para eventos",
+        "body": "Salões, restaurantes, auditórios e coworkings que recebem nossos encontros e ganham visibilidade diante da rede."
+      },
+      "foraDaCaixa": {
+        "title": "Oportunidades fora da caixa",
+        "body": "Ideias que ninguém pediu e todo mundo agradece: projetos conjuntos, benefícios para membros, formatos novos de encontro."
+      }
+    },
+    "form": {
+      "label": "Proposta",
+      "title": "Proponha uma parceria",
+      "intro": "Conte o que você tem em mente e o que espera da rede. Nossa liderança avalia cada proposta e responde com clareza."
+    }
+  },
+  "lideranca": {
+    "hero": {
+      "label": "Liderança",
+      "title": "Quem sustenta a rede",
+      "intro": "No primeiro ano, o BBN é conduzido por sete líderes voluntários. Eles cuidam da agenda, da qualidade dos encontros e, principalmente, das pessoas que chegam."
+    },
+    "structure": {
+      "label": "Estrutura",
+      "title": "Sete líderes, três pilares",
+      "intro": "Um Líder Geral responde pela direção da rede. Cada pilar tem dois líderes, que dividem planejamento e execução ao longo do ano.",
+      "generalLeader": "Líder Geral / Presidente",
+      "pillarLeaders": "2 líderes por pilar"
+    },
+    "motto": {
+      "quote": "Líderes desenvolvem líderes.",
+      "body": "Nenhum líder do BBN está ali para brilhar sozinho. A tarefa de cada um é formar o próximo: delegar de verdade, ensinar no processo e abrir espaço para quem vem atrás."
+    },
+    "cycle": {
+      "label": "Método",
+      "title": "O ciclo da liderança",
+      "intro": "Quatro passos repetidos em cada evento, reunião e treinamento. É o que mantém a rede consistente sem depender de uma só pessoa."
+    },
+    "cycleSteps": {
+      "planejar": {
+        "title": "Planejar",
+        "body": "Definir objetivo, data e o que sucesso significa naquele encontro — antes de convidar a primeira pessoa."
+      },
+      "delegar": {
+        "title": "Delegar",
+        "body": "Distribuir responsabilidades com nome e prazo, dando espaço real para novos líderes aprenderem fazendo."
+      },
+      "executar": {
+        "title": "Executar",
+        "body": "Cumprir o combinado com excelência: horário respeitado, conteúdo preparado e cada convidado bem recebido."
+      },
+      "avaliar": {
+        "title": "Avaliar",
+        "body": "Ouvir os participantes, reconhecer o que funcionou e corrigir o que não funcionou antes do próximo ciclo."
+      }
+    }
+  },
+  "contato": {
+    "hero": {
+      "label": "Contato",
+      "title": "Vamos conversar",
+      "intro": "Quer se candidatar, propor uma parceria ou apenas entender melhor como a rede funciona? Envie uma mensagem pelo formulário desta página — alguém da liderança responde."
+    },
+    "channels": {
+      "label": "Canais",
+      "title": "Como falar com o BBN",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "location": "Localização",
+      "whatsappCta": "Falar no WhatsApp",
+      "whatsappCtaAria": "Falar no WhatsApp (abre em nova aba)",
+      "emailCta": "Enviar e-mail",
+      "form": "Formulário",
+      "formBody": "O caminho mais rápido para falar com a liderança do BBN hoje.",
+      "formCta": "Enviar mensagem"
+    },
+    "social": {
+      "label": "Redes sociais",
+      "title": "Siga o BBN",
+      "intro": "No Instagram e no Facebook você acompanha os encontros, conhece os membros e recebe primeiro o anúncio de cada nova data. Siga os dois perfis.",
+      "handle": "@bbn_usa"
+    },
+    "form": {
+      "label": "Mensagem",
+      "title": "Envie uma mensagem",
+      "intro": "Escreva com calma o que você precisa. Quanto mais contexto, mais útil será a nossa resposta."
+    }
+  },
+  "testimonials": {
+    "label": "Depoimentos",
+    "title": "Quem vive a rede conta",
+    "intro": "Empreendedores brasileiros contam, com as próprias palavras, o que mudou depois de entrar no BBN."
+  },
+  "privacidade": {
+    "hero": {
+      "label": "Privacidade",
+      "title": "Política de Privacidade",
+      "intro": "Explicamos, em linguagem simples, quais informações o BBN recebe pelo site, para que usamos e como você pode pedir acesso, correção ou exclusão dos seus dados."
+    },
+    "updated": "Última atualização: 29 de setembro de 2026",
+    "formspreeLinkLabel": "Política de privacidade do Formspree",
+    "contactCta": "Enviar pedido pelo formulário de contato",
+    "sections": {
+      "quemSomos": {
+        "title": "Quem somos",
+        "body": [
+          "A Brazilian Business Network (BBN) é uma rede de empreendedores brasileiros com base em Connecticut, USA.",
+          "O BBN é o responsável pelas informações que você envia pelos formulários deste site e decide como elas são usadas."
+        ]
+      },
+      "coleta": {
+        "title": "Dados que coletamos",
+        "body": [
+          "Coletamos apenas o que você preenche nos formulários do site. Todo envio também registra a página e o idioma de onde foi feito. Veja o que cada formulário pede:"
+        ],
+        "items": [
+          "Candidatura de membresia: nome, e-mail, telefone/WhatsApp, cidade, empresa, área de atuação, site ou Instagram e motivação.",
+          "Proposta de parceria: nome, e-mail, telefone, empresa, cargo, cidade, tipo de parceria, site ou Instagram e mensagem.",
+          "Contato: nome, e-mail, telefone, assunto e mensagem.",
+          "Visita a uma reunião: nome, e-mail, telefone/WhatsApp, negócio ou profissão e como conheceu o BBN."
+        ]
+      },
+      "finalidade": {
+        "title": "Para que usamos seus dados",
+        "body": [
+          "Usamos suas informações para responder à sua mensagem, avaliar candidaturas de membresia, agendar visitas às reuniões mensais e tratar propostas de parceria.",
+          "Seus dados nunca são vendidos e não são usados para marketing sem relação com o pedido que você fez."
+        ]
+      },
+      "formspree": {
+        "title": "Envio dos formulários",
+        "body": [
+          "Os formulários do site são processados pela Formspree, Inc., empresa dos Estados Unidos. Ela recebe, armazena e encaminha cada envio ao BBN, atuando apenas como prestadora de serviço.",
+          "A Formspree tem a sua própria política de privacidade, que você pode consultar no link abaixo."
+        ]
+      },
+      "analytics": {
+        "title": "Estatísticas de visitas",
+        "body": [
+          "Usamos o Vercel Web Analytics para entender quais páginas são mais visitadas. Ele reúne apenas estatísticas agregadas de visualização de páginas.",
+          "A ferramenta não usa cookies e não identifica visitantes individualmente."
+        ]
+      },
+      "fotos": {
+        "title": "Fotos dos eventos",
+        "body": [
+          "As fotos dos encontros do BBN são publicadas na galeria do site e hospedadas no Cloudinary.",
+          "Se você aparece em alguma foto e prefere que ela saia do site, pode pedir a remoção pelo formulário de contato."
+        ]
+      },
+      "compartilhamento": {
+        "title": "Com quem compartilhamos",
+        "body": [
+          "Seus dados só passam pelos prestadores de serviço citados nesta política, na medida necessária para o site funcionar.",
+          "Nunca vendemos suas informações."
+        ]
+      },
+      "retencao": {
+        "title": "Por quanto tempo guardamos",
+        "body": [
+          "Guardamos suas informações apenas pelo tempo necessário para tratar o seu pedido ou, no caso de membros, enquanto durar a relação de membresia."
+        ]
+      },
+      "direitos": {
+        "title": "Seus direitos",
+        "body": [
+          "Você pode pedir para acessar, corrigir ou excluir os dados que enviou ao BBN.",
+          "Para isso, use o formulário de contato da página Contato e conte o que você precisa. A liderança do BBN cuida do seu pedido."
+        ]
+      }
+    }
+  },
+  "forms": {
+    "fields": {
+      "name": "Nome completo",
+      "email": "E-mail",
+      "phone": "Telefone / WhatsApp",
+      "company": "Empresa",
+      "role": "Cargo",
+      "city": "Cidade",
+      "businessArea": "Área de atuação",
+      "website": "Site ou Instagram",
+      "partnerType": "Tipo de parceria",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "motivation": "Por que você quer fazer parte do BBN?",
+      "profession": "Negócio ou profissão",
+      "hearAbout": "Como conheceu o BBN?"
+    },
+    "hearAboutOptions": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "indicacao": "Indicação de um membro",
+      "evento": "Em um evento do BBN",
+      "google": "Pesquisa no Google",
+      "outro": "Outro"
+    },
+    "placeholders": {
+      "message": "Conte um pouco sobre você e seu negócio",
+      "motivation": "O que você espera da rede e como pretende contribuir"
+    },
+    "optional": "opcional",
+    "submit": {
+      "membresia": "Enviar candidatura",
+      "parceiros": "Enviar proposta",
+      "contato": "Enviar mensagem",
+      "visita": "Quero visitar",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "Mensagem enviada",
+      "membresia": "Recebemos sua candidatura. A liderança do BBN vai analisar as informações e entrar em contato para uma conversa.",
+      "parceiros": "Recebemos sua proposta de parceria. Nossa liderança vai avaliar e responder com os próximos passos.",
+      "contato": "Recebemos sua mensagem e vamos responder pelo canal que você informou.",
+      "visita": "Recebemos seu pedido de visita. A liderança do BBN vai entrar em contato com a data da próxima reunião."
+    },
+    "error": {
+      "title": "Não foi possível enviar",
+      "body": "Algo deu errado no envio. Confira sua conexão e tente novamente em alguns instantes."
+    },
+    "validation": {
+      "required": "Campo obrigatório",
+      "email": "Informe um e-mail válido",
+      "minLength": "Escreva um pouco mais"
+    },
+    "notConfigured": "Este formulário ainda está sendo configurado. Enquanto isso, fale com a gente pelo Instagram ou pelo Facebook do BBN.",
+    "consent": "Ao enviar, você concorda com a nossa {link}.",
+    "consentLink": "Política de Privacidade"
+  },
+  "footer": {
+    "tagline": "Conectando empreendedores brasileiros.",
+    "navLabel": "Navegação",
+    "contactLabel": "Contato",
+    "followLabel": "Siga o BBN",
+    "rights": "Todos os direitos reservados.",
+    "builtLine": "Não construímos apenas negócios. Construímos pessoas que constroem negócios."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "O endereço que você abriu não existe ou mudou de lugar. Volte ao início e continue conhecendo a rede.",
+    "button": "Voltar ao início"
+  }
+}

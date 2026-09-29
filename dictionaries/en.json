@@ -1,0 +1,698 @@
+{
+  "meta": {
+    "siteName": "Brazilian Business Network",
+    "defaultDescription": "A network of Brazilian entrepreneurs connecting people, training businesses and creating opportunities. Events, monthly meetings and member-only trainings.",
+    "pages": {
+      "home": {
+        "title": "Brazilian Business Network — A network of Brazilian entrepreneurs",
+        "description": "Connect people. Grow businesses. Create opportunities. Transform lives. Meet BBN, the network that develops the whole Brazilian entrepreneur."
+      },
+      "sobre": {
+        "title": "About BBN — Purpose, vision and culture",
+        "description": "We don't just build businesses. We build people who build businesses. Discover the purpose, vision and culture of the Brazilian Business Network."
+      },
+      "comoFunciona": {
+        "title": "How it works — Events, meetings and trainings",
+        "description": "Three pillars hold BBN together: events twice a year, monthly meetings in Portuguese and quarterly trainings exclusive to members."
+      },
+      "membresia": {
+        "title": "Membership — Join BBN",
+        "description": "Annual membership of US$ 150 per person, subject to review and approval. See the member journey, the network guidelines and send your application."
+      },
+      "eventos": {
+        "title": "BBN Events — Gatherings, photos and videos",
+        "description": "BBN gathers twice a year, in March and September. See the next gathering and revisit the photos and videos from previous editions."
+      },
+      "parceiros": {
+        "title": "Partners — BBN relationship hub",
+        "description": "Partnerships in other states and in Brazil, podcasts, newspapers, influencers, event venues and out-of-the-box ideas. Bring us yours."
+      },
+      "lideranca": {
+        "title": "Leadership — Leaders develop leaders",
+        "description": "Seven leaders guide BBN's first year: one General Leader and two per pillar. Meet the cycle of plan, delegate, execute and evaluate."
+      },
+      "contato": {
+        "title": "Contact — Talk to BBN",
+        "description": "Reach the BBN leadership through the contact form or on Instagram and Facebook. We answer applications, partnership proposals and event invitations."
+      },
+      "privacidade": {
+        "title": "Privacy Policy — Brazilian Business Network",
+        "description": "See what data BBN collects through the site's forms, why we use it, who we share it with and how to ask for access, correction or deletion of your data."
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "sobre": "About",
+    "comoFunciona": "How it works",
+    "membresia": "Membership",
+    "eventos": "Events",
+    "parceiros": "Partners",
+    "lideranca": "Leadership",
+    "contato": "Contact",
+    "privacidade": "Privacy Policy",
+    "sobreGroupLabel": "Get to know BBN",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to main content",
+    "langToggleLabel": "Change language",
+    "langPt": "Português",
+    "langEn": "English",
+    "menuLabel": "Main menu",
+    "mobileMenuLabel": "Site navigation",
+    "openSubmenu": "Open {label} submenu"
+  },
+  "common": {
+    "becomeMember": "Become a member",
+    "nextEvent": "Next event",
+    "learnMore": "Learn more",
+    "seeAll": "See all",
+    "backToEvents": "Back to events",
+    "followUs": "Follow BBN",
+    "viewOnInstagram": "View on Instagram",
+    "instagramAria": "BBN on Instagram (opens in a new tab)",
+    "facebookAria": "BBN on Facebook (opens in a new tab)",
+    "perYear": "per year",
+    "perPerson": "per person",
+    "leaders": "Leaders",
+    "frequency": "Frequency",
+    "registerSpot": "Save my spot",
+    "registerSpotAria": "Save my spot at the next event (opens in a new tab)",
+    "visitMeeting": "I'd like to visit a meeting",
+    "whatsappFloatAria": "Message BBN on WhatsApp (opens in a new tab)",
+    "opensNewTab": "(opens in a new tab)"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "A network of Brazilian entrepreneurs",
+      "title": "Where the Brazilian entrepreneur grows in good company",
+      "tagline": "Connect people. Grow businesses. Create opportunities. Transform lives.",
+      "intro": "Building a business far from home doesn't have to be lonely. BBN brings together Brazilian entrepreneurs who trade contacts, learn side by side and open doors for one another — in Portuguese, among people who understand your road."
+    },
+    "purpose": {
+      "label": "Purpose",
+      "title": "Ideas become businesses. Businesses become opportunities.",
+      "body": "We exist to connect, train and boost Brazilian entrepreneurs: turning ideas into businesses, businesses into opportunities and opportunities into impact. Every gathering serves that movement — nothing on our calendar is there by accident.",
+      "visionLabel": "Vision",
+      "vision": "To build the largest and most relevant network of Brazilian entrepreneurs."
+    },
+    "movements": {
+      "label": "What we do",
+      "title": "Five movements, one road",
+      "intro": "From the first handshake to the impact left in the community, BBN walks with the entrepreneur across five fronts that hold each other up."
+    },
+    "pillars": {
+      "label": "How it works",
+      "title": "Three pillars that hold the network together",
+      "intro": "Events that bring everyone together, meetings that keep the bond alive and trainings that deepen the practice. Each pillar has two leaders in charge."
+    },
+    "photos": {
+      "label": "Gallery",
+      "title": "The network in motion",
+      "intro": "Full rooms, conversations that turn into business and people who arrived alone and left with partners. See what our gatherings look like.",
+      "empty": "The first photos arrive right after the next gathering. Follow BBN on Instagram to see them first.",
+      "photoAlt": "BBN event photo {n}"
+    },
+    "instagram": {
+      "label": "Instagram",
+      "title": "Follow our events",
+      "intro": "Photos from the gatherings, behind the scenes of the meetings and every new date are announced first on @bbn_usa. Follow along.",
+      "photoAlt": "BBN event photo {n}",
+      "ctaLabel": "Open the BBN Instagram profile in a new tab"
+    },
+    "visit": {
+      "label": "Visit a meeting",
+      "title": "Get to know the network before you decide",
+      "body": "Every month the network meets, in Portuguese, to present businesses and trade referrals. Guests may attend up to two meetings before becoming members — come and feel the spirit of the room up close.",
+      "button": "I'd like to visit a meeting"
+    },
+    "cta": {
+      "title": "Your next great partnership is already in the room",
+      "body": "Membership is annual and goes through review and approval — we want people committed to contributing, not just attending. Send your application and let's talk.",
+      "button": "Become a member"
+    }
+  },
+  "sobre": {
+    "hero": {
+      "label": "About BBN",
+      "title": "A network built on people",
+      "intro": "The Brazilian Business Network started from a simple conviction: a Brazilian entrepreneur in good company goes further. We are a community of business owners who meet, learn and recommend each other — on purpose, in Portuguese and without false competition."
+    },
+    "purpose": {
+      "label": "Purpose",
+      "title": "Connect, train and boost",
+      "body": "We connect Brazilian entrepreneurs, train them with practical content and boost those ready for the next step. The goal never changes: turning ideas into businesses, businesses into opportunities and opportunities into real impact on people's lives."
+    },
+    "vision": {
+      "label": "Vision",
+      "title": "The largest and most relevant network of Brazilian entrepreneurs",
+      "body": "Relevant before large. We want to be the network a Brazilian entrepreneur turns to when they need a partner they can trust, an honest referral or someone who has already solved the problem in front of them today."
+    },
+    "belief": {
+      "label": "What we believe",
+      "quote": "We don't just build businesses. We build people who build businesses.",
+      "attribution": "Brazilian Business Network"
+    },
+    "whole": {
+      "label": "Whole-person development",
+      "title": "The whole entrepreneur",
+      "intro": "Nobody separates life from business. That's why we look at five dimensions of the entrepreneur — when one of them falls behind, the business feels it."
+    },
+    "dimensions": {
+      "mente": {
+        "title": "Mind",
+        "body": "Clarity to decide and discipline to keep learning. We cultivate reading, mentoring and honest discussion about wins and mistakes."
+      },
+      "corpo": {
+        "title": "Body",
+        "body": "Energy is a working asset. Sleep, movement and food sustain the routine of someone carrying a business on their back."
+      },
+      "espirito": {
+        "title": "Spirit",
+        "body": "Purpose and principles before profit. We care for the inner life that holds up hard decisions and keeps character in place."
+      },
+      "relacionamentos": {
+        "title": "Relationships",
+        "body": "Family, partners, team and clients. A healthy business rarely survives worn-out relationships — here we say that out loud."
+      },
+      "negocios": {
+        "title": "Business",
+        "body": "Management, sales, finance and growth. The daily practice, worked through with people who have faced the same challenge."
+      }
+    },
+    "culture": {
+      "label": "Culture",
+      "title": "How we behave inside the network",
+      "intro": "Culture isn't a poster on the wall. These are six behaviors you'll recognize in the first meeting you attend."
+    },
+    "cultureValues": {
+      "contribuicao": {
+        "title": "Contribution first",
+        "body": "Whoever arrives asking how they can help leaves with more than whoever arrives selling. Give before you ask — that's the BBN way."
+      },
+      "relacionamento": {
+        "title": "Relationship before business",
+        "body": "Trust first, proposal second. A referral only counts when you'd put your own name next to it."
+      },
+      "crescimento": {
+        "title": "Constant growth",
+        "body": "Nobody arrives finished. Every event, meeting and training exists so you leave different from how you came in."
+      },
+      "oportunidades": {
+        "title": "Mutual opportunities",
+        "body": "One person's win opens the road for the next. We share clients, suppliers, contacts and lessons without holding anything back."
+      },
+      "voluntariado": {
+        "title": "Volunteering",
+        "body": "The network works because ordinary people give their time. Serving as a volunteer is the natural first step for anyone who wants to grow here."
+      },
+      "intencionalidade": {
+        "title": "Intentionality",
+        "body": "No gathering without a goal. Every agenda, invitation and conversation has a clear reason and a defined next step."
+      }
+    }
+  },
+  "movements": {
+    "conectar": {
+      "title": "Connect",
+      "body": "We bring together Brazilian entrepreneurs who would hardly have met otherwise. Connection with a name, a face and context — not a contact list."
+    },
+    "capacitar": {
+      "title": "Train",
+      "body": "Trainings and practical content on management, sales and finance, led by people who have applied it in their own business."
+    },
+    "impulsionar": {
+      "title": "Boost",
+      "body": "Anyone with an idea ready to go finds the push that was missing: partners, referrals and people willing to open the first door."
+    },
+    "desenvolver": {
+      "title": "Grow",
+      "body": "Growth with consistency, not by luck. We walk alongside the business all year, meeting after meeting."
+    },
+    "impacto": {
+      "title": "Create impact",
+      "body": "A strong business creates jobs, supports families and strengthens the Brazilian community around it. That's where the whole journey lands."
+    }
+  },
+  "pillars": {
+    "eventos": {
+      "title": "Events",
+      "frequency": "Twice a year — March and September",
+      "body": "Two major gatherings a year bring the whole network together: content, connections and the moment newcomers get to know BBN up close."
+    },
+    "reunioes": {
+      "title": "Meetings",
+      "frequency": "Monthly, in Portuguese",
+      "body": "Every month the network sits down together, in Portuguese, to present businesses, trade referrals and solve real problems in open discussion."
+    },
+    "treinamentos": {
+      "title": "Trainings",
+      "frequency": "Quarterly, members only",
+      "body": "Four times a year, member-only training sessions: deep, practical content you can apply the following week."
+    }
+  },
+  "comoFunciona": {
+    "hero": {
+      "label": "How it works",
+      "title": "A simple, steady calendar",
+      "intro": "BBN is organized around three pillars, each with two leaders in charge. Together they keep the network active all year: events that gather everyone, meetings that bring people closer and trainings that go deeper."
+    },
+    "visit": {
+      "label": "Visit a meeting",
+      "title": "Take a seat at the table as a guest",
+      "intro": "The easiest way to understand BBN is to attend a monthly meeting. Fill out the form and the leadership will get in touch with the details of the next meeting.",
+      "guestRule": "Guests may attend up to two monthly meetings before becoming members, and meetings are held in Portuguese.",
+      "formTitle": "Request your visit"
+    },
+    "outro": {
+      "title": "Ready to take a seat at the table?",
+      "body": "Guests may attend up to two meetings before becoming members — enough time to get to know the network and decide without pressure. After that, it's time to join.",
+      "button": "Become a member"
+    }
+  },
+  "membresia": {
+    "hero": {
+      "label": "Membership",
+      "title": "Join the network",
+      "intro": "Being a BBN member means having a group of Brazilian entrepreneurs committed to your growth all year long: monthly meetings, member-only trainings, partnerships and the chance to move from member to leader."
+    },
+    "price": {
+      "label": "Investment",
+      "amount": "US$ 150",
+      "unit": "per person / year",
+      "note": "Membership is subject to review and approval. Sending an application costs nothing: we talk first."
+    },
+    "approval": {
+      "label": "Process",
+      "title": "How approval works",
+      "intro": "We approve based on shared values, not revenue. Four simple steps, no red tape."
+    },
+    "approvalSteps": {
+      "candidatura": {
+        "title": "Application",
+        "body": "You fill out the form telling us who you are, what you do and what you expect from the network. It takes a few minutes."
+      },
+      "conversa": {
+        "title": "Conversation",
+        "body": "A BBN leader reaches out for an open talk about your business, your expectations and the way the network works."
+      },
+      "analise": {
+        "title": "Review",
+        "body": "The leadership assesses whether there is room and alignment of values. Either way, you get a clear answer."
+      },
+      "boasVindas": {
+        "title": "Welcome",
+        "body": "Once approved, you're introduced to the network, added to the members group and expected at the next monthly meeting."
+      }
+    },
+    "journey": {
+      "label": "Journey",
+      "title": "From guest to leader",
+      "intro": "Nobody has to arrive finished. This is the road most members travel inside BBN."
+    },
+    "journeySteps": {
+      "evento": "You attend an event and feel the spirit of the network.",
+      "conhece": "You get to know BBN: purpose, pillars and the people behind it.",
+      "membro": "You become a member after the application and the talk with the leadership.",
+      "reunioes": "You join the monthly meetings and start being known by name.",
+      "treinamentos": "You take part in the quarterly trainings, exclusive to members.",
+      "parceiros": "You access partners and opportunities inside and outside your state.",
+      "desenvolve": "You grow the business with steady support from people who have been there.",
+      "contribui": "You start contributing: referring, teaching and opening doors for others.",
+      "lidera": "You serve as a volunteer and take the lead on one front of the network."
+    },
+    "guidelines": {
+      "label": "Guidelines",
+      "title": "Community agreements",
+      "intro": "Five agreements keep the room safe and the focus in the right place. Every member knows them and upholds them."
+    },
+    "guidelineItems": {
+      "semPolitica": {
+        "title": "No politics",
+        "body": "There is no room for party politics at our gatherings. The focus is business, development and relationships."
+      },
+      "principiosCristaos": {
+        "title": "Christian principles, non-denominational",
+        "body": "Our values are rooted in Christian principles and the network is tied to no denomination. Everyone is welcome, with mutual respect."
+      },
+      "portugues": {
+        "title": "Meetings in Portuguese",
+        "body": "Meetings are held in Portuguese so everyone can speak naturally and nobody is left out of the conversation."
+      },
+      "convidados": {
+        "title": "Guests: up to two meetings",
+        "body": "Anyone who isn't a member yet may attend up to two meetings. After that, it's time to become a member to keep going."
+      },
+      "treinamentosMembros": {
+        "title": "Trainings for members only",
+        "body": "The quarterly trainings are exclusive to members — it's the most direct benefit of membership."
+      }
+    },
+    "faq": {
+      "label": "Questions",
+      "title": "Frequently asked questions"
+    },
+    "faqItems": {
+      "valor": {
+        "q": "How much does membership cost?",
+        "a": "US$ 150 per person per year. It covers taking part in the monthly meetings and access to the quarterly trainings reserved for members."
+      },
+      "quemPode": {
+        "q": "Who can become a BBN member?",
+        "a": "Brazilian entrepreneurs who already run a business or are getting one off the ground and want to grow by contributing to others. Commitment counts more than company size."
+      },
+      "aprovacao": {
+        "q": "Why does membership go through approval?",
+        "a": "Because the strength of the network lies in trust between people. The conversation with the leadership makes sure values line up before anyone joins."
+      },
+      "convidado": {
+        "q": "Can I visit before deciding?",
+        "a": "Yes. Guests may attend up to two meetings before becoming members. It's the best way to get to know the network from the inside."
+      },
+      "idioma": {
+        "q": "What language are the gatherings held in?",
+        "a": "Meetings are in Portuguese. The website has an English version so you can introduce BBN to partners and guests."
+      },
+      "treinamentos": {
+        "q": "Are the trainings included?",
+        "a": "Yes. Four a year, members only, with practical content on management, sales, finance and leadership."
+      },
+      "politica": {
+        "q": "Why is politics off the table?",
+        "a": "To protect what brings us together. With no party agenda, the discussion stays where it matters to everyone: business, development and relationships."
+      },
+      "voluntariado": {
+        "q": "How do I become a volunteer or a leader?",
+        "a": "By contributing. Members who serve consistently are invited to act as a volunteer and, over time, to lead one front of the network."
+      }
+    },
+    "form": {
+      "label": "Application",
+      "title": "Send your application",
+      "intro": "Tell us who you are and what you're looking for in the network. A BBN leader will reach out for a conversation — no commitment and no payment at this stage."
+    }
+  },
+  "eventos": {
+    "hero": {
+      "label": "Events",
+      "title": "Twice a year, the whole network in one room",
+      "intro": "BBN gatherings happen in March and September. These are the days when members, guests and partners come together to learn, present their businesses and lock in the connections that carry the year."
+    },
+    "upcoming": {
+      "label": "Calendar",
+      "title": "Next gathering",
+      "tbd": "date and venue coming soon",
+      "followCta": "Follow @bbn_usa and hear the date and venue announcement before anyone else."
+    },
+    "past": {
+      "label": "Archive",
+      "title": "Previous editions",
+      "intro": "Revisit the gatherings that already happened: photos, videos and a record of who was there.",
+      "empty": "There are no previous editions here yet. The first record arrives right after the next gathering."
+    },
+    "gallery": {
+      "label": "Gallery",
+      "photosTitle": "Photos",
+      "videosTitle": "Videos",
+      "empty": "The photos from this edition are still being organized. Check back soon.",
+      "photoAlt": "{title} — photo {n}",
+      "openPhoto": "Open photo {n} full screen",
+      "lightboxTitle": "Gallery: {title}",
+      "viewGallery": "View gallery",
+      "coverAlt": "Cover image for {title}",
+      "emptyHint": "Follow @bbn_usa to see the photos as soon as they are out.",
+      "videosEyebrow": "Watch"
+    },
+    "instagramNote": "More photos and videos on Instagram: {handle}",
+    "lightbox": {
+      "open": "Enlarge photo",
+      "close": "Close",
+      "previous": "Previous photo",
+      "next": "Next photo",
+      "counter": "{current} of {total}",
+      "playVideo": "Watch video"
+    },
+    "instagramLinkLabel": "Open the BBN Instagram profile in a new tab"
+  },
+  "parceiros": {
+    "hero": {
+      "label": "Partners",
+      "title": "A network that opens outward",
+      "intro": "BBN grows alongside those who walk with us: companies, media outlets, venues and Brazilian communities in other states and in Brazil. Partnership here is a real exchange of value, both ways."
+    },
+    "hub": {
+      "label": "Relationship hub",
+      "title": "Four partnership fronts",
+      "intro": "Each front widens the reach of the network and opens concrete opportunities for our members."
+    },
+    "types": {
+      "outrosEstados": {
+        "title": "Other states and Brazil",
+        "body": "Brazilian groups and leaders in other American states and in Brazil, so a connection made here turns into business there."
+      },
+      "parceirosLocais": {
+        "title": "Local partners",
+        "body": "Podcasts, newspapers and influencers who tell the stories of Brazilian entrepreneurs and carry the network to more people."
+      },
+      "espacos": {
+        "title": "Event venues",
+        "body": "Halls, restaurants, auditoriums and coworking spaces that host our gatherings and gain visibility with the network."
+      },
+      "foraDaCaixa": {
+        "title": "Out-of-the-box opportunities",
+        "body": "Ideas nobody asked for and everybody thanks you for: joint projects, member benefits, new formats for gatherings."
+      }
+    },
+    "form": {
+      "label": "Proposal",
+      "title": "Propose a partnership",
+      "intro": "Tell us what you have in mind and what you expect from the network. Our leadership reviews every proposal and answers clearly."
+    }
+  },
+  "lideranca": {
+    "hero": {
+      "label": "Leadership",
+      "title": "The people who hold the network up",
+      "intro": "In its first year, BBN is led by seven volunteer leaders. They look after the calendar, the quality of the gatherings and, above all, the people who walk through the door."
+    },
+    "structure": {
+      "label": "Structure",
+      "title": "Seven leaders, three pillars",
+      "intro": "A General Leader is responsible for the direction of the network. Each pillar has two leaders who share planning and execution throughout the year.",
+      "generalLeader": "General Leader / President",
+      "pillarLeaders": "2 leaders per pillar"
+    },
+    "motto": {
+      "quote": "Leaders develop leaders.",
+      "body": "No BBN leader is there to shine alone. The job of each one is to form the next: delegate for real, teach along the way and make room for whoever comes behind."
+    },
+    "cycle": {
+      "label": "Method",
+      "title": "The leadership cycle",
+      "intro": "Four steps repeated at every event, meeting and training. It's what keeps the network consistent without depending on one person."
+    },
+    "cycleSteps": {
+      "planejar": {
+        "title": "Plan",
+        "body": "Set the goal, the date and what success means for that gathering — before inviting the first person."
+      },
+      "delegar": {
+        "title": "Delegate",
+        "body": "Hand out responsibilities with a name and a deadline, giving new leaders real room to learn by doing."
+      },
+      "executar": {
+        "title": "Execute",
+        "body": "Deliver what was agreed, well: start on time, content prepared and every guest properly welcomed."
+      },
+      "avaliar": {
+        "title": "Evaluate",
+        "body": "Listen to the participants, name what worked and fix what didn't before the next cycle begins."
+      }
+    }
+  },
+  "contato": {
+    "hero": {
+      "label": "Contact",
+      "title": "Let's talk",
+      "intro": "Want to apply, propose a partnership or simply understand how the network works? Send us a message through the form on this page — someone from the leadership will answer."
+    },
+    "channels": {
+      "label": "Channels",
+      "title": "How to reach BBN",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "location": "Location",
+      "whatsappCta": "Message on WhatsApp",
+      "whatsappCtaAria": "Message on WhatsApp (opens in a new tab)",
+      "emailCta": "Send an e-mail",
+      "form": "Form",
+      "formBody": "The fastest way to reach the BBN leadership today.",
+      "formCta": "Send a message"
+    },
+    "social": {
+      "label": "Social media",
+      "title": "Follow BBN",
+      "intro": "On Instagram and Facebook you can follow the gatherings, meet the members and hear every new date first. Follow both profiles.",
+      "handle": "@bbn_usa"
+    },
+    "form": {
+      "label": "Message",
+      "title": "Send a message",
+      "intro": "Take your time and tell us what you need. The more context you give, the more useful our answer will be."
+    }
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "In our members' own words",
+    "intro": "Brazilian entrepreneurs share, in their own words, what changed after joining BBN."
+  },
+  "privacidade": {
+    "hero": {
+      "label": "Privacy",
+      "title": "Privacy Policy",
+      "intro": "In plain language: what information BBN receives through this site, what we use it for and how you can ask for access, correction or deletion of your data."
+    },
+    "updated": "Last updated: September 29, 2026",
+    "formspreeLinkLabel": "Formspree privacy policy",
+    "contactCta": "Send a request through the contact form",
+    "sections": {
+      "quemSomos": {
+        "title": "Who we are",
+        "body": [
+          "The Brazilian Business Network (BBN) is a network of Brazilian entrepreneurs based in Connecticut, USA.",
+          "BBN is responsible for the information you send through the forms on this site and decides how it is used."
+        ]
+      },
+      "coleta": {
+        "title": "What we collect",
+        "body": [
+          "We only collect what you fill in on the site's forms. Every submission also records the page and the language it was sent from. Here is what each form asks for:"
+        ],
+        "items": [
+          "Membership application: name, e-mail, phone/WhatsApp, city, company, line of business, website or Instagram and motivation.",
+          "Partnership proposal: name, e-mail, phone, company, role, city, partnership type, website or Instagram and message.",
+          "Contact: name, e-mail, phone, subject and message.",
+          "Meeting visit: name, e-mail, phone/WhatsApp, business or profession and how you heard about BBN."
+        ]
+      },
+      "finalidade": {
+        "title": "What we use your data for",
+        "body": [
+          "We use your information to reply to your message, review membership applications, schedule visits to the monthly meetings and handle partnership proposals.",
+          "Your data is never sold and is not used for marketing unrelated to the request you made."
+        ]
+      },
+      "formspree": {
+        "title": "How the forms are sent",
+        "body": [
+          "The site's forms are processed by Formspree, Inc., a company based in the United States. It receives, stores and forwards each submission to BBN, acting only as a service provider.",
+          "Formspree has its own privacy policy, which you can read at the link below."
+        ]
+      },
+      "analytics": {
+        "title": "Visit statistics",
+        "body": [
+          "We use Vercel Web Analytics to understand which pages are visited most. It only gathers aggregated page-view statistics.",
+          "The tool does not use cookies and does not identify individual visitors."
+        ]
+      },
+      "fotos": {
+        "title": "Event photos",
+        "body": [
+          "Photos from BBN gatherings are published in the site's gallery and hosted on Cloudinary.",
+          "If you appear in a photo and would rather it came down, you can ask for it to be removed through the contact form."
+        ]
+      },
+      "compartilhamento": {
+        "title": "Who we share it with",
+        "body": [
+          "Your data only passes through the service providers named in this policy, as far as needed for the site to work.",
+          "We never sell your information."
+        ]
+      },
+      "retencao": {
+        "title": "How long we keep it",
+        "body": [
+          "We keep your information only as long as needed to handle your request or, for members, for as long as the membership relationship lasts."
+        ]
+      },
+      "direitos": {
+        "title": "Your rights",
+        "body": [
+          "You can ask to access, correct or delete the data you sent to BBN.",
+          "To do so, use the contact form on the Contact page and tell us what you need. The BBN leadership will take care of your request."
+        ]
+      }
+    }
+  },
+  "forms": {
+    "fields": {
+      "name": "Full name",
+      "email": "E-mail",
+      "phone": "Phone / WhatsApp",
+      "company": "Company",
+      "role": "Role",
+      "city": "City",
+      "businessArea": "Line of business",
+      "website": "Website or Instagram",
+      "partnerType": "Partnership type",
+      "subject": "Subject",
+      "message": "Message",
+      "motivation": "Why do you want to be part of BBN?",
+      "profession": "Business or profession",
+      "hearAbout": "How did you hear about BBN?"
+    },
+    "hearAboutOptions": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "indicacao": "Referral from a member",
+      "evento": "At a BBN event",
+      "google": "Google search",
+      "outro": "Other"
+    },
+    "placeholders": {
+      "message": "Tell us a little about you and your business",
+      "motivation": "What you expect from the network and how you plan to contribute"
+    },
+    "optional": "optional",
+    "submit": {
+      "membresia": "Send application",
+      "parceiros": "Send proposal",
+      "contato": "Send message",
+      "visita": "I'd like to visit",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Message sent",
+      "membresia": "We received your application. The BBN leadership will review your information and reach out for a conversation.",
+      "parceiros": "We received your partnership proposal. Our leadership will review it and reply with the next steps.",
+      "contato": "We received your message and will reply through the channel you provided.",
+      "visita": "We received your visit request. The BBN leadership will get in touch with the date of the next meeting."
+    },
+    "error": {
+      "title": "We couldn't send it",
+      "body": "Something went wrong along the way. Check your connection and try again in a moment."
+    },
+    "validation": {
+      "required": "Required field",
+      "email": "Enter a valid e-mail",
+      "minLength": "Please write a little more"
+    },
+    "notConfigured": "This form is still being set up. In the meantime, reach us on BBN's Instagram or Facebook.",
+    "consent": "By submitting, you agree to our {link}.",
+    "consentLink": "Privacy Policy"
+  },
+  "footer": {
+    "tagline": "Connecting Brazilian entrepreneurs.",
+    "navLabel": "Navigation",
+    "contactLabel": "Contact",
+    "followLabel": "Follow BBN",
+    "rights": "All rights reserved.",
+    "builtLine": "We don't just build businesses. We build people who build businesses."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The address you opened doesn't exist or has moved. Head back home and keep exploring the network.",
+    "button": "Back to home"
+  }
+}

@@ -1,26 +1,284 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   BBN brand tokens — source of truth: CLAUDE.md / docs/BBN_Institucional.pdf
+   This is the ONLY file allowed to contain raw hex values.
+   ========================================================================== */
+@theme {
+  --color-bbn-black: #0a0a0a;
+  --color-bbn-surface: #121212;
+  --color-bbn-card: #1a1a1a;
+  --color-bbn-gold: #c29a4d;
+  --color-bbn-gold-light: #e6c076;
+  --color-bbn-gold-dark: #b2904d;
+  --color-bbn-champagne: #f1e0b4;
+
+  /* Body copy only — headings never use this, they use champagne or gradient. */
+  --color-bbn-ink: #e8e4dd;
+  --color-bbn-muted: #9c958a;
+
+  /* Thin gold rules and hairline borders. */
+  --color-bbn-line: rgba(194, 154, 77, 0.24);
+  --color-bbn-line-strong: rgba(194, 154, 77, 0.45);
+
+  /* Type: serif headings, Lato body, Poppins uppercase labels. */
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-lato), system-ui, -apple-system, sans-serif;
+  --font-label: var(--font-poppins), system-ui, sans-serif;
+
+  /* Rhythm: py-16 mobile / py-24 desktop, 1280px container. */
+  --spacing-section: 4rem;
+  --spacing-section-lg: 6rem;
+  --container-site: 80rem;
 }
 
+/* --------------------------------------------------------------------------
+   Expose the shadcn semantic variables as Tailwind colour utilities, so
+   `bg-background`, `text-muted-foreground`, `border-border` and friends resolve.
+   `@theme inline` is required here: these read from :root at runtime rather than
+   being inlined at build time.
+   -------------------------------------------------------------------------- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* --------------------------------------------------------------------------
+   shadcn semantic variables mapped onto the brand.
+   The site is dark-only: :root and .dark are identical, so semantic tokens
+   (bg-background, text-muted-foreground, border-border…) are always on-brand.
+   -------------------------------------------------------------------------- */
+:root,
+.dark {
+  --background: var(--color-bbn-black);
+  --foreground: var(--color-bbn-ink);
+
+  --card: var(--color-bbn-card);
+  --card-foreground: var(--color-bbn-ink);
+
+  --popover: var(--color-bbn-card);
+  --popover-foreground: var(--color-bbn-ink);
+
+  --primary: var(--color-bbn-gold);
+  --primary-foreground: var(--color-bbn-black);
+
+  --secondary: var(--color-bbn-surface);
+  --secondary-foreground: var(--color-bbn-champagne);
+
+  --muted: var(--color-bbn-surface);
+  --muted-foreground: var(--color-bbn-muted);
+
+  --accent: var(--color-bbn-gold-light);
+  --accent-foreground: var(--color-bbn-black);
+
+  --destructive: #d2604a;
+
+  --border: var(--color-bbn-line);
+  --input: var(--color-bbn-line-strong);
+  --ring: var(--color-bbn-gold-light);
+
+  /* Sharp and editorial — not pill-shaped. */
+  --radius: 0.25rem;
+
+  --sidebar: var(--color-bbn-surface);
+  --sidebar-foreground: var(--color-bbn-ink);
+  --sidebar-primary: var(--color-bbn-gold);
+  --sidebar-primary-foreground: var(--color-bbn-black);
+  --sidebar-accent: var(--color-bbn-card);
+  --sidebar-accent-foreground: var(--color-bbn-champagne);
+  --sidebar-border: var(--color-bbn-line);
+  --sidebar-ring: var(--color-bbn-gold-light);
+
+  --chart-1: var(--color-bbn-gold-light);
+  --chart-2: var(--color-bbn-gold);
+  --chart-3: var(--color-bbn-gold-dark);
+  --chart-4: var(--color-bbn-champagne);
+  --chart-5: var(--color-bbn-muted);
+}
+
+/* ==========================================================================
+   Brand utilities
+   ========================================================================== */
+
+/* Gold gradient on key headings, following the glyphs via background-clip.
+   The champagne colour is declared first as a self-contained fallback, and the
+   gradient is applied only where background-clip:text is supported. Keeping the
+   fallback inside this utility means it does not depend on class ordering
+   against `text-bbn-champagne` — the heading is never invisible. */
+@utility text-gold-gradient {
+  color: var(--color-bbn-champagne);
+
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    background-image: linear-gradient(
+      135deg,
+      var(--color-bbn-gold-dark) 0%,
+      var(--color-bbn-gold-light) 50%,
+      var(--color-bbn-gold) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Gold gradient as a surface (buttons, rules, number plates). */
+@utility bg-gold-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-bbn-gold-dark) 0%,
+    var(--color-bbn-gold-light) 50%,
+    var(--color-bbn-gold) 100%
+  );
+}
+
+/* Thin gold divider line that fades at both ends. */
+@utility rule-gold {
+  height: 1px;
+  border: 0;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-bbn-gold) 50%,
+    transparent 100%
+  );
+}
+
+/* Short solid gold rule used under section labels. */
+@utility rule-gold-short {
+  height: 1px;
+  width: 3rem;
+  border: 0;
+  background-color: var(--color-bbn-gold);
+}
+
+/* Uppercase letter-spaced label, straight from the PDF. */
+@utility label-caps {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Large outlined numeral for 01 / 02 / 03 cards. */
+@utility numeral-outline {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-bbn-gold);
+}
+
+/* Subtle gold vignette for hero and CTA bands. */
+@utility bbn-vignette {
+  background-image:
+    radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      rgba(194, 154, 77, 0.14) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 50% 100%,
+      rgba(194, 154, 77, 0.07) 0%,
+      transparent 70%
+    );
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    /* Offset anchor targets so the sticky header never covers them. */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headings are serif and never plain white — champagne or gold gradient. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-bbn-champagne;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, on-brand focus ring everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--color-bbn-gold-light);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-bbn-gold);
+    color: var(--color-bbn-black);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
