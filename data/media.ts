@@ -87,8 +87,8 @@ export const photos = {
   "440A7613_eprab3": {
     kind: "stage",
     alt: {
-      pt: "Palestrante no palco mostra uma folha com QR code enquanto fala ao microfone",
-      en: "A speaker on stage holds up a sheet with a QR code while talking into the microphone",
+      pt: "Palestrante no palco do Encontro BBN apresenta ao microfone, mostrando ao salão uma folha com QR code",
+      en: "A speaker on the BBN Gathering stage presents into the microphone, holding up a sheet with a QR code for the room",
     },
   },
   "440A7644_jifx5i": {
@@ -209,7 +209,7 @@ export const placements = {
       "440A7606_kp7nb6",
       "440A7828_sgesye",
     ],
-    purpose: "440A7548_ftermt",
+    purpose: "440A7613_eprab3",
     pillars: {
       eventos: "440A7656_z0tcjv",
       reunioes: "440A7475_m0buec",
@@ -242,7 +242,6 @@ export const placements = {
   },
   membresia: {
     banner: "440A7905_xf3r8x",
-    price: "440A7545_wxulur",
   },
   eventos: {
     banner: "440A7656_z0tcjv",
