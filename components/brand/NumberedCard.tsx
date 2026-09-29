@@ -11,6 +11,8 @@ type NumberedCardProps = {
   /** Small gold meta line under the title, e.g. frequency or leaders. */
   meta?: ReactNode;
   icon?: ReactNode;
+  /** Edge-to-edge header above the content, e.g. an unframed BrandPhoto. */
+  media?: ReactNode;
   className?: string;
   /** `outline` draws the numeral as a large hollow figure behind the content. */
   numeralStyle?: "plate" | "outline";
@@ -26,6 +28,7 @@ export function NumberedCard({
   children,
   meta,
   icon,
+  media,
   className,
   numeralStyle = "plate",
 }: NumberedCardProps) {
@@ -46,6 +49,12 @@ export function NumberedCard({
         >
           {numeral}
         </span>
+      ) : null}
+
+      {media ? (
+        <div className="-mx-6 -mt-6 mb-6 border-b border-bbn-line sm:-mx-8 sm:-mt-8 sm:mb-8">
+          {media}
+        </div>
       ) : null}
 
       <div className="relative flex flex-col gap-4">

@@ -34,6 +34,19 @@
   --spacing-section: 4rem;
   --spacing-section-lg: 6rem;
   --container-site: 80rem;
+
+  /* Hero carousel: slow zoom (Ken Burns) that spans a slide's 4s on screen plus
+     its 1s crossfade out, so the image never snaps back mid-fade. */
+  --animate-kenburns: bbn-kenburns 5s linear forwards;
+
+  @keyframes bbn-kenburns {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -223,6 +236,30 @@
       rgba(194, 154, 77, 0.07) 0%,
       transparent 70%
     );
+}
+
+/* --------------------------------------------------------------------------
+   Photo scrims. Text over a photo must hold WCAG AA even over a pure-white
+   pixel, which needs roughly 86% black under muted body copy. These radial
+   layers deepen the overlay only where the text sits, so the photo still reads
+   at the edges. Used on top of a linear overlay (see HeroCarousel/PhotoBackdrop).
+   -------------------------------------------------------------------------- */
+@utility bbn-scrim-hero {
+  background-image: radial-gradient(
+    ellipse 60% 55% at 50% 50%,
+    color-mix(in srgb, var(--color-bbn-black) 75%, transparent) 0%,
+    color-mix(in srgb, var(--color-bbn-black) 75%, transparent) 60%,
+    transparent 100%
+  );
+}
+
+@utility bbn-scrim-center {
+  background-image: radial-gradient(
+    ellipse 70% 65% at 50% 50%,
+    color-mix(in srgb, var(--color-bbn-black) 55%, transparent) 0%,
+    color-mix(in srgb, var(--color-bbn-black) 40%, transparent) 55%,
+    transparent 100%
+  );
 }
 
 @layer base {

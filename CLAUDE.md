@@ -80,6 +80,17 @@ Each form also shows a consent line linking to `/[lang]/privacidade`. The guest 
 - To add an event, append it to `pastEvents` in `data/events.ts` (slug, cloudinaryFolder, startDate, city, optional venue and coverPublicId, videos, pt/en title and description), then run `npx next typegen` and `npm run build`. The full walkthrough is in the README.
 - `upcomingEvents` holds month and year only. An optional `registrationUrl` (http/https) shows the gold "Garantir minha vaga" button on the Eventos card, the Início next-event card and the Início hero; without it, the event keeps its "em breve" state.
 
+## Photos on the site (`data/media.ts`)
+- **`data/media.ts` is the only place that decides which event photo appears where.** `photos` is the curated catalogue: public ID, kind (room, stage, networking, sponsor, group, portrait), pt/en alt text, and an `unusable` reason for photos that stay in the gallery only. `placements` maps each page section to IDs. Components never hard-code a public ID.
+- At build time, a check fails if a page repeats a photo (Eventos also counts the event covers) or if an unusable photo is placed.
+- Components:
+  - `BrandPhoto` is a framed photo: 4px radius, gold hairline border, soft dark gradient, always lazy.
+  - `PhotoBackdrop` is a decorative full-bleed background behind text, with `alt=""`, used on page banners and the home membership CTA.
+  - `HeroCarousel` is the home hero: a 4s crossfade with Ken Burns zoom. Only its first slide is eager with `fetchPriority="high"`; the other slides mount after hydration. Under `prefers-reduced-motion` it shows the first photo only.
+- Text over photos must stay WCAG AA even over a white pixel. The overlays in `PhotoBackdrop` and `HeroCarousel`, and the `bbn-scrim-*` utilities in `globals.css`, are tuned for that. Don't lighten them without re-checking.
+- Without `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`, `photo()` and `photoList()` return null or `[]`, and every section falls back to its photo-less layout.
+- `PageHero` takes an optional `photo`. Every inner page has one except Privacidade, which stays plain, and the event detail page, whose gallery already shows every photo.
+
 ## Privacy and analytics
 `/[lang]/privacidade` (copy is under `privacidade` in the dictionaries) is linked in the footer's bottom row (`legalNavItems`) and under every form. `@vercel/analytics` is mounted in `app/[lang]/layout.tsx`.
 

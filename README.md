@@ -119,7 +119,7 @@ npm run build
 
 That's it. The event appears on `/pt/eventos`, gets its own page at `/pt/eventos/2027-03-encontro-bbn` (and the `/en` equivalents), lands in `sitemap.xml`, and emits `Event` JSON-LD.
 
-**Adding more photos to an event that already exists needs no code change at all.** Upload them to the same Cloudinary folder; the pages revalidate hourly (`export const revalidate = 3600`) and pick them up.
+**Adding more photos to an event that already exists needs no code change at all.** Upload them to the same Cloudinary folder; the event pages revalidate hourly (`export const revalidate = 3600`) and pick them up. (Photos on the other pages are curated. See "Changing which photo appears where".)
 
 ### Announcing the next event
 
@@ -170,6 +170,19 @@ proxy.ts               Locale redirect (Next 16's replacement for middleware.ts)
 - **One `navTree`** in `lib/i18n.ts` feeds the header, the mobile sheet, the footer and the sitemap. The desktop header shows five items with a `Sobre` dropdown; the mobile sheet lists all eight. Add a page in one place. Legal pages (`legalNavItems`) sit in the footer's bottom row and in the sitemap, not in the main nav.
 - **Empty means hidden.** Optional contact data is `""` until it's known, and every consumer checks `hasValue()`. Never render a placeholder such as "em breve" or `TODO_` for it.
 - **shadcn here is Base UI, not Radix** — compose with `render={<Button />}` (plus `nativeButton={false}` for non-buttons), not `asChild`.
+
+---
+
+## Changing which photo appears where
+
+Every event photo outside the gallery is chosen in **`data/media.ts`**:
+
+- **`photos`** is the catalogue. Each Cloudinary public ID has a `kind`, pt/en `alt` text describing what's actually in the frame, and, for photos that shouldn't be used, an `unusable` reason. Those stay in the event gallery but are never placed.
+- **`placements`** maps page sections to IDs: the home carousel (`home.hero`, in order; the first slide is the one that loads first), each page banner (`<page>.banner`), the pillar photos, the Sobre mosaic, and so on.
+
+To swap a photo, change its ID in `placements`. To use photos from a new event, add them to `photos` first (kind and alt text in both languages), then reference them. The build fails if the same photo appears twice on a page, or if a photo marked `unusable` is placed. That keeps pages from repeating themselves.
+
+Prefer landscape shots for wide areas (banners, the carousel, the Sobre band). Crops use Cloudinary's subject-aware `g_auto`, so faces stay in frame on phones. The event gallery also shows the catalogue's alt text when a photo has an entry.
 
 ---
 

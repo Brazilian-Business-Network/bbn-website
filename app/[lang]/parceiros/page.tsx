@@ -10,6 +10,7 @@ import { Section } from "@/components/brand/Section";
 import { SectionLabel } from "@/components/brand/SectionLabel";
 import { SiteForm } from "@/components/forms/SiteForm";
 import { partnerTypes } from "@/data/content";
+import { photo, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, routes } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
@@ -43,6 +44,7 @@ export default async function ParceirosPage({
         label={dict.parceiros.hero.label}
         title={dict.parceiros.hero.title}
         intro={dict.parceiros.hero.intro}
+        photo={photo(placements.parceiros.banner, lang)?.publicId}
       />
 
       {/* --------------------------------------------- Relationship hub (4) */}

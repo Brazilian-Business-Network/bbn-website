@@ -10,17 +10,18 @@ import { Section } from "@/components/brand/Section";
 import { SectionLabel } from "@/components/brand/SectionLabel";
 import { Testimonials } from "@/components/brand/Testimonials";
 import { RegisterButton } from "@/components/eventos/RegisterButton";
+import { HeroCarousel } from "@/components/home/HeroCarousel";
 import { InstagramFeedGrid } from "@/components/home/InstagramFeedGrid";
+import { BrandPhoto } from "@/components/media/BrandPhoto";
+import { PhotoBackdrop } from "@/components/media/PhotoBackdrop";
 import { Button } from "@/components/ui/button";
 import { movements, pillars } from "@/data/content";
 import { formatEventMonth, getNextEvent, registrationUrl } from "@/data/events";
+import { photo, photoList, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, localizedPath, routes } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
-
-/** New Cloudinary uploads appear within the hour without a redeploy. */
-export const revalidate = 3600;
 
 export async function generateMetadata({
   params,
@@ -43,12 +44,25 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const dict = await getDictionary(lang);
   const nextEvent = getNextEvent();
   const registerHref = registrationUrl(nextEvent);
+  const media = placements.home;
+  const heroSlides = photoList(media.hero, lang);
+  const purposePhoto = photo(media.purpose, lang);
+  const ctaPhoto = photo(media.cta, lang);
 
   return (
     <>
       {/* ---------------------------------------------------------------- Hero */}
-      <Section tone="black" vignette className="overflow-hidden pt-20 lg:pt-28">
-        <Container className="flex flex-col items-center text-center">
+      {/* Photo carousel behind the copy; the bottom padding leaves room for its
+          controls. Without Cloudinary it falls back to the plain vignette band. */}
+      <Section
+        tone="black"
+        vignette={heroSlides.length === 0}
+        className="overflow-hidden pt-20 pb-28 lg:pt-28 lg:pb-32"
+      >
+        {heroSlides.length > 0 ? (
+          <HeroCarousel slides={heroSlides} labels={dict.home.hero.carousel} />
+        ) : null}
+        <Container className="relative z-10 flex flex-col items-center text-center">
           <CrownLogo size="xl" priority />
 
           <p className="label-caps mt-8 text-bbn-gold">{dict.home.hero.eyebrow}</p>
@@ -106,7 +120,9 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       {/* ------------------------------------------------------------- Purpose */}
       <Section tone="surface" topRule>
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* Text left, networking photo right; the vision line moves under the
+              purpose copy. Without a photo it keeps the two-column text layout. */}
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
             <div className="flex flex-col gap-6">
               <SectionLabel>{dict.home.purpose.label}</SectionLabel>
               <GoldHeading as="h2" size="xl">
@@ -115,14 +131,30 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
               <p className="text-pretty text-lg leading-relaxed text-bbn-muted">
                 {dict.home.purpose.body}
               </p>
+              {purposePhoto ? (
+                <div className="mt-4 flex flex-col gap-4 border-t border-bbn-line pt-8">
+                  <SectionLabel>{dict.home.purpose.visionLabel}</SectionLabel>
+                  <p className="font-serif text-2xl leading-snug text-bbn-champagne">
+                    {dict.home.purpose.vision}
+                  </p>
+                </div>
+              ) : null}
             </div>
 
-            <div className="flex flex-col gap-5 border-l-0 lg:border-l lg:border-bbn-line lg:pl-20">
-              <SectionLabel>{dict.home.purpose.visionLabel}</SectionLabel>
-              <p className="font-serif text-2xl leading-snug text-bbn-champagne sm:text-3xl">
-                {dict.home.purpose.vision}
-              </p>
-            </div>
+            {purposePhoto ? (
+              <BrandPhoto
+                photo={purposePhoto}
+                ratio="4/3"
+                sizes="(min-width: 1280px) 580px, (min-width: 1024px) 45vw, 92vw"
+              />
+            ) : (
+              <div className="flex flex-col gap-5 border-l-0 lg:border-l lg:border-bbn-line lg:pl-20">
+                <SectionLabel>{dict.home.purpose.visionLabel}</SectionLabel>
+                <p className="font-serif text-2xl leading-snug text-bbn-champagne sm:text-3xl">
+                  {dict.home.purpose.vision}
+                </p>
+              </div>
+            )}
           </div>
         </Container>
       </Section>
@@ -177,6 +209,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           <ul className="grid gap-5 lg:grid-cols-3">
             {pillars.map((pillar, index) => {
               const copy = dict.pillars[pillar.key];
+              const pillarPhoto = photo(media.pillars[pillar.key], lang);
 
               return (
                 <li key={pillar.key}>
@@ -184,6 +217,16 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
                     index={index + 1}
                     title={copy.title}
                     meta={copy.frequency}
+                    media={
+                      pillarPhoto ? (
+                        <BrandPhoto
+                          photo={pillarPhoto}
+                          ratio="3/2"
+                          framed={false}
+                          sizes="(min-width: 1280px) 400px, (min-width: 1024px) 31vw, 92vw"
+                        />
+                      ) : undefined
+                    }
                     className="h-full"
                   >
                     <p>{copy.body}</p>
@@ -290,13 +333,13 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <Section tone="surface" topRule>
         <Container>
           <InstagramFeedGrid
+            photos={photoList(media.feed, lang)}
             labels={{
               eyebrow: dict.home.instagram.label,
               heading: dict.home.instagram.title,
               description: dict.home.instagram.intro,
               cta: dict.common.viewOnInstagram,
               ctaLabel: dict.home.instagram.ctaLabel,
-              photoAlt: dict.home.instagram.photoAlt,
             }}
           />
         </Container>
@@ -306,8 +349,13 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <Testimonials locale={lang} labels={dict.testimonials} tone="card" />
 
       {/* -------------------------------------------------------- Membership */}
-      <Section tone="black" vignette>
-        <Container className="flex flex-col items-center gap-7 text-center">
+      <Section
+        tone="black"
+        vignette={!ctaPhoto}
+        className={ctaPhoto ? "overflow-hidden" : undefined}
+      >
+        {ctaPhoto ? <PhotoBackdrop publicId={ctaPhoto.publicId} variant="center" /> : null}
+        <Container className="relative z-10 flex flex-col items-center gap-7 text-center">
           <CrownLogo size="md" />
           <GoldHeading as="h2" size="xl" variant="gradient" className="max-w-3xl">
             {dict.home.cta.title}

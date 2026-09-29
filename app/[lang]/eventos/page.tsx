@@ -16,6 +16,7 @@ import {
   getPastEvents,
   registrationUrl,
 } from "@/data/events";
+import { photo, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
@@ -53,6 +54,7 @@ export default async function EventosPage({ params }: PageProps<"/[lang]/eventos
         label={dict.eventos.hero.label}
         title={dict.eventos.hero.title}
         intro={dict.eventos.hero.intro}
+        photo={photo(placements.eventos.banner, lang)?.publicId}
       />
 
       {/* ------------------------------------------------------ Next edition */}

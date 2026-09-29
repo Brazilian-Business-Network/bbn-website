@@ -62,10 +62,12 @@ export function PhotoGrid({
           const width = item.width || FALLBACK_WIDTH;
           const height = item.height || FALLBACK_HEIGHT;
           const isVideo = item.resourceType === "video";
-          const alt = interpolate(labels.photoAlt, {
-            title: eventTitle,
-            n: index + 1,
-          });
+          const alt =
+            item.alt ??
+            interpolate(labels.photoAlt, {
+              title: eventTitle,
+              n: index + 1,
+            });
 
           return (
             <li key={item.publicId} className="break-inside-avoid">

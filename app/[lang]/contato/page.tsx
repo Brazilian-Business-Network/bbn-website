@@ -9,7 +9,9 @@ import { Section } from "@/components/brand/Section";
 import { SectionLabel } from "@/components/brand/SectionLabel";
 import { SiteForm } from "@/components/forms/SiteForm";
 import { Button } from "@/components/ui/button";
+import { BrandPhoto } from "@/components/media/BrandPhoto";
 import { emailUrl, site, whatsappUrl } from "@/data/site";
+import { photo, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, routes } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
@@ -37,6 +39,7 @@ export default async function ContatoPage({ params }: PageProps<"/[lang]/contato
 
   const wa = whatsappUrl();
   const mail = emailUrl();
+  const bandPhoto = photo(placements.contato.band, lang);
 
   return (
     <>
@@ -44,6 +47,7 @@ export default async function ContatoPage({ params }: PageProps<"/[lang]/contato
         label={dict.contato.hero.label}
         title={dict.contato.hero.title}
         intro={dict.contato.hero.intro}
+        photo={photo(placements.contato.banner, lang)?.publicId}
       />
 
       {/* ----------------------------------------------------------- Channels */}
@@ -208,6 +212,14 @@ export default async function ContatoPage({ params }: PageProps<"/[lang]/contato
       <Section tone="card" topRule id="formulario">
         <Container>
           <div className="mx-auto flex max-w-3xl flex-col gap-10">
+            {bandPhoto ? (
+              <BrandPhoto
+                photo={bandPhoto}
+                ratio="3/1"
+                sizes="(min-width: 832px) 768px, 92vw"
+              />
+            ) : null}
+
             <div className="flex flex-col gap-5 text-center">
               <SectionLabel align="center">{dict.contato.form.label}</SectionLabel>
               <GoldHeading as="h2" size="xl">

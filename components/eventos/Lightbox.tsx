@@ -130,10 +130,12 @@ export function Lightbox({
 
   const width = current.width || FALLBACK_WIDTH;
   const height = current.height || FALLBACK_HEIGHT;
-  const alt = interpolate(labels.photoAlt, {
-    title: eventTitle,
-    n: index + 1,
-  });
+  const alt =
+    current.alt ??
+    interpolate(labels.photoAlt, {
+      title: eventTitle,
+      n: index + 1,
+    });
 
   return (
     <Dialog open={open} onOpenChange={(next) => onOpenChange(next)}>

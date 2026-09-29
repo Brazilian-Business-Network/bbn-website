@@ -12,8 +12,10 @@ import { Testimonials } from "@/components/brand/Testimonials";
 import { SiteForm } from "@/components/forms/SiteForm";
 import { Faq } from "@/components/membresia/Faq";
 import { JourneyTimeline } from "@/components/membresia/JourneyTimeline";
+import { BrandPhoto } from "@/components/media/BrandPhoto";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { approvalSteps, faqKeys, guidelines } from "@/data/content";
+import { photo, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, routes } from "@/lib/i18n";
 import { buildMetadata, faqJsonLd, membershipOfferJsonLd } from "@/lib/seo";
@@ -46,6 +48,7 @@ export default async function MembresiaPage({
     q: dict.membresia.faqItems[key].q,
     a: dict.membresia.faqItems[key].a,
   }));
+  const pricePhoto = photo(placements.membresia.price, lang);
 
   return (
     <>
@@ -55,12 +58,25 @@ export default async function MembresiaPage({
         label={dict.membresia.hero.label}
         title={dict.membresia.hero.title}
         intro={dict.membresia.hero.intro}
+        photo={photo(placements.membresia.banner, lang)?.publicId}
       />
 
       {/* --------------------------------------------------------- Price card */}
+      {/* With a photo the card and the group photo share the row; the card's
+          note then stacks under the price instead of sitting beside it. */}
       <Section tone="surface" topRule>
-        <Container>
-          <div className="flex flex-col items-start gap-8 rounded-sm border border-bbn-line-strong bg-bbn-card p-8 sm:p-12 lg:flex-row lg:items-center lg:justify-between">
+        <Container
+          className={
+            pricePhoto ? "grid gap-6 lg:grid-cols-2 lg:items-stretch lg:gap-8" : undefined
+          }
+        >
+          <div
+            className={
+              pricePhoto
+                ? "flex flex-col justify-center gap-8 rounded-sm border border-bbn-line-strong bg-bbn-card p-8 sm:p-12"
+                : "flex flex-col items-start gap-8 rounded-sm border border-bbn-line-strong bg-bbn-card p-8 sm:p-12 lg:flex-row lg:items-center lg:justify-between"
+            }
+          >
             <div className="flex flex-col gap-4">
               <SectionLabel>{dict.membresia.price.label}</SectionLabel>
               <p className="flex flex-wrap items-baseline gap-3">
@@ -73,10 +89,25 @@ export default async function MembresiaPage({
               </p>
             </div>
 
-            <p className="max-w-md text-pretty leading-relaxed text-bbn-muted lg:border-l lg:border-bbn-line lg:pl-12">
+            <p
+              className={
+                pricePhoto
+                  ? "text-pretty leading-relaxed text-bbn-muted border-t border-bbn-line pt-8"
+                  : "max-w-md text-pretty leading-relaxed text-bbn-muted lg:border-l lg:border-bbn-line lg:pl-12"
+              }
+            >
               {dict.membresia.price.note}
             </p>
           </div>
+
+          {pricePhoto ? (
+            <BrandPhoto
+              photo={pricePhoto}
+              ratio="3/2"
+              sizes="(min-width: 1280px) 600px, (min-width: 1024px) 47vw, 92vw"
+              className="lg:aspect-auto lg:h-full lg:min-h-72"
+            />
+          ) : null}
         </Container>
       </Section>
 

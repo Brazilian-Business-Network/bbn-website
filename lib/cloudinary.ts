@@ -22,10 +22,9 @@ export type CloudMedia = {
   capturedAt: string | null;
   /** Cloudinary display name — for camera files, the frame number (440A7379…). */
   displayName: string;
+  /** Curated alt text from data/media.ts, when the photo is catalogued there. */
+  alt?: string;
 };
-
-/** Root folder that holds one sub-folder per edition. */
-const EVENTS_ROOT = "bbn/eventos";
 
 /** Search API page size cap. */
 const MAX_RESULTS = 500;
@@ -203,31 +202,6 @@ export async function getEventMedia(folder: string): Promise<CloudMedia[]> {
     return media.sort(byCaptureOrder);
   } catch (error) {
     warn(`search for "${safeFolder}"`, error);
-    return [];
-  }
-}
-
-/**
- * Most recent photos across all editions — feeds the home page's
- * "Acompanhe nossos eventos" grid. Images only: a muted looping clip would read
- * as broken in a static grid.
- */
-export async function getLatestEventPhotos(limit: number): Promise<CloudMedia[]> {
-  const client = getClient();
-  if (!client) return [];
-
-  const max = Math.min(Math.max(Math.trunc(limit) || 0, 1), MAX_RESULTS);
-
-  try {
-    const media = await runSearch(
-      client,
-      `(asset_folder:${EVENTS_ROOT}/* OR folder:${EVENTS_ROOT}/*) AND resource_type:image`,
-    );
-    // Newest first: reverse capture order, so the last frames of the latest
-    // event lead.
-    return media.sort(byCaptureOrder).reverse().slice(0, max);
-  } catch (error) {
-    warn("latest photos search", error);
     return [];
   }
 }

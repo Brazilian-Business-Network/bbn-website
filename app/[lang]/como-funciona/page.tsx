@@ -10,11 +10,14 @@ import { PageHero } from "@/components/brand/PageHero";
 import { Section } from "@/components/brand/Section";
 import { SectionLabel } from "@/components/brand/SectionLabel";
 import { SiteForm } from "@/components/forms/SiteForm";
+import { BrandPhoto } from "@/components/media/BrandPhoto";
 import { Button } from "@/components/ui/button";
 import { pillars } from "@/data/content";
+import { photo, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale, localizedPath, routes } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
+import { cn } from "@/lib/utils";
 
 export async function generateMetadata({
   params,
@@ -38,6 +41,7 @@ export default async function ComoFuncionaPage({
   if (!isLocale(lang)) notFound();
 
   const dict = await getDictionary(lang);
+  const media = placements.comoFunciona;
 
   return (
     <>
@@ -45,64 +49,97 @@ export default async function ComoFuncionaPage({
         label={dict.comoFunciona.hero.label}
         title={dict.comoFunciona.hero.title}
         intro={dict.comoFunciona.hero.intro}
+        photo={photo(media.banner, lang)?.publicId}
       />
 
       {/* ----------------------------------------------------- The 3 pillars */}
       <Section tone="surface" topRule>
         <Container>
-          <ol className="flex flex-col gap-6">
+          <ol className="flex flex-col gap-12 lg:gap-8">
             {pillars.map((pillar, index) => {
               const copy = dict.pillars[pillar.key];
               const numeral = String(index + 1).padStart(2, "0");
 
+              const pillarPhoto = photo(media.pillars[pillar.key], lang);
+
               return (
                 <li
                   key={pillar.key}
-                  className="group relative overflow-hidden rounded-sm border border-bbn-line bg-bbn-card p-8 transition-colors duration-300 hover:border-bbn-line-strong sm:p-12"
+                  className={cn(
+                    "grid gap-4 lg:gap-6",
+                    pillarPhoto && "lg:grid-cols-2 lg:items-stretch",
+                  )}
                 >
-                  {/* Large hollow numeral, as on the institutional pages. */}
-                  <span
-                    aria-hidden="true"
-                    className="numeral-outline pointer-events-none absolute -top-6 right-4 select-none text-[6rem] leading-none opacity-25 sm:text-[9rem]"
-                  >
-                    {numeral}
-                  </span>
+                  {/* Photo beside the card, alternating sides on desktop;
+                      stacked above it on mobile. */}
+                  {pillarPhoto ? (
+                    <BrandPhoto
+                      photo={pillarPhoto}
+                      ratio="3/2"
+                      sizes="(min-width: 1280px) 600px, (min-width: 1024px) 47vw, 92vw"
+                      className={cn(
+                        "lg:aspect-auto lg:h-full lg:min-h-80",
+                        index % 2 === 1 && "lg:order-last",
+                      )}
+                    />
+                  ) : null}
 
-                  <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-16">
-                    <div className="flex flex-col gap-5">
-                      <span className="flex items-center gap-4 text-bbn-gold">
-                        <BrandIcon name={pillar.icon} />
-                        <span className="label-caps">{numeral}</span>
-                      </span>
+                  <article className="group relative overflow-hidden rounded-sm border border-bbn-line bg-bbn-card p-8 transition-colors duration-300 hover:border-bbn-line-strong sm:p-12">
+                    {/* Large hollow numeral, as on the institutional pages. */}
+                    <span
+                      aria-hidden="true"
+                      className="numeral-outline pointer-events-none absolute -top-6 right-4 select-none text-[6rem] leading-none opacity-25 sm:text-[9rem]"
+                    >
+                      {numeral}
+                    </span>
 
-                      <GoldHeading as="h2" size="lg" variant="gradient">
-                        {copy.title}
-                      </GoldHeading>
+                    <div
+                      className={cn(
+                        "relative grid gap-8",
+                        !pillarPhoto && "lg:grid-cols-[1fr_auto] lg:items-start lg:gap-16",
+                      )}
+                    >
+                      <div className="flex flex-col gap-5">
+                        <span className="flex items-center gap-4 text-bbn-gold">
+                          <BrandIcon name={pillar.icon} />
+                          <span className="label-caps">{numeral}</span>
+                        </span>
 
-                      <p className="max-w-2xl text-pretty leading-relaxed text-bbn-muted">
-                        {copy.body}
-                      </p>
+                        <GoldHeading as="h2" size="lg" variant="gradient">
+                          {copy.title}
+                        </GoldHeading>
+
+                        <p className="max-w-2xl text-pretty leading-relaxed text-bbn-muted">
+                          {copy.body}
+                        </p>
+                      </div>
+
+                      <dl
+                        className={
+                          pillarPhoto
+                            ? "flex flex-wrap gap-x-12 gap-y-6 border-t border-bbn-line pt-6"
+                            : "flex flex-col gap-6 border-t border-bbn-line pt-6 lg:min-w-56 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0"
+                        }
+                      >
+                        <div>
+                          <dt className="label-caps text-bbn-gold">
+                            {dict.common.frequency}
+                          </dt>
+                          <dd className="mt-2 text-bbn-champagne">
+                            {copy.frequency}
+                          </dd>
+                        </div>
+                        <div>
+                          <dt className="label-caps text-bbn-gold">
+                            {dict.common.leaders}
+                          </dt>
+                          <dd className="mt-2 text-bbn-champagne">
+                            {pillar.leaders.join(" · ")}
+                          </dd>
+                        </div>
+                      </dl>
                     </div>
-
-                    <dl className="flex flex-col gap-6 border-t border-bbn-line pt-6 lg:min-w-56 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
-                      <div>
-                        <dt className="label-caps text-bbn-gold">
-                          {dict.common.frequency}
-                        </dt>
-                        <dd className="mt-2 text-bbn-champagne">
-                          {copy.frequency}
-                        </dd>
-                      </div>
-                      <div>
-                        <dt className="label-caps text-bbn-gold">
-                          {dict.common.leaders}
-                        </dt>
-                        <dd className="mt-2 text-bbn-champagne">
-                          {pillar.leaders.join(" · ")}
-                        </dd>
-                      </div>
-                    </dl>
-                  </div>
+                  </article>
                 </li>
               );
             })}

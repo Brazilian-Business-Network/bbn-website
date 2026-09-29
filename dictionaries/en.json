@@ -87,7 +87,14 @@
       "eyebrow": "A network of Brazilian entrepreneurs",
       "title": "Where the Brazilian entrepreneur grows in good company",
       "tagline": "Connect people. Grow businesses. Create opportunities. Transform lives.",
-      "intro": "Building a business far from home doesn't have to be lonely. BBN brings together Brazilian entrepreneurs who trade contacts, learn side by side and open doors for one another — in Portuguese, among people who understand your road."
+      "intro": "Building a business far from home doesn't have to be lonely. BBN brings together Brazilian entrepreneurs who trade contacts, learn side by side and open doors for one another — in Portuguese, among people who understand your road.",
+      "carousel": {
+        "label": "Photos from the BBN Gathering — March 2026",
+        "slide": "Photo {n} of {total}",
+        "goTo": "Show photo {n} of {total}",
+        "pause": "Pause the photo slideshow",
+        "play": "Resume the photo slideshow"
+      }
     },
     "purpose": {
       "label": "Purpose",
@@ -117,7 +124,6 @@
       "label": "Instagram",
       "title": "Follow our events",
       "intro": "Photos from the gatherings, behind the scenes of the meetings and every new date are announced first on @bbn_usa. Follow along.",
-      "photoAlt": "BBN event photo {n}",
       "ctaLabel": "Open the BBN Instagram profile in a new tab"
     },
     "visit": {

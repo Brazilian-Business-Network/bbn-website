@@ -87,7 +87,14 @@
       "eyebrow": "Rede de empreendedores brasileiros",
       "title": "O lugar onde o empreendedor brasileiro cresce acompanhado",
       "tagline": "Conectar pessoas. Desenvolver negócios. Criar oportunidades. Transformar vidas.",
-      "intro": "Empreender longe de casa não precisa ser solitário. O BBN reúne empreendedores brasileiros que trocam contatos, aprendem juntos e abrem portas uns para os outros — em português, entre pessoas que entendem o seu caminho."
+      "intro": "Empreender longe de casa não precisa ser solitário. O BBN reúne empreendedores brasileiros que trocam contatos, aprendem juntos e abrem portas uns para os outros — em português, entre pessoas que entendem o seu caminho.",
+      "carousel": {
+        "label": "Fotos do Encontro BBN — Março 2026",
+        "slide": "Foto {n} de {total}",
+        "goTo": "Mostrar a foto {n} de {total}",
+        "pause": "Pausar a apresentação de fotos",
+        "play": "Retomar a apresentação de fotos"
+      }
     },
     "purpose": {
       "label": "Propósito",
@@ -117,7 +124,6 @@
       "label": "Instagram",
       "title": "Acompanhe nossos eventos",
       "intro": "Fotos dos encontros, bastidores das reuniões e o anúncio de cada nova data saem primeiro no @bbn_usa. Siga e fique por dentro.",
-      "photoAlt": "Foto de evento do BBN {n}",
       "ctaLabel": "Abrir o Instagram do BBN em uma nova aba"
     },
     "visit": {

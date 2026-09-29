@@ -8,7 +8,9 @@ import { IconCard } from "@/components/brand/IconCard";
 import { PageHero } from "@/components/brand/PageHero";
 import { Section } from "@/components/brand/Section";
 import { SectionLabel } from "@/components/brand/SectionLabel";
+import { BrandPhoto } from "@/components/media/BrandPhoto";
 import { cultureValues, dimensions } from "@/data/content";
+import { photo, photoList, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
@@ -33,6 +35,9 @@ export default async function SobrePage({ params }: PageProps<"/[lang]/sobre">) 
   if (!isLocale(lang)) notFound();
 
   const dict = await getDictionary(lang);
+  const media = placements.sobre;
+  const bandPhoto = photo(media.band, lang);
+  const mosaic = photoList(media.mosaic, lang);
 
   return (
     <>
@@ -40,13 +45,22 @@ export default async function SobrePage({ params }: PageProps<"/[lang]/sobre">) 
         label={dict.sobre.hero.label}
         title={dict.sobre.hero.title}
         intro={dict.sobre.hero.intro}
+        photo={photo(media.banner, lang)?.publicId}
       />
 
       {/* -------------------------------------------- Purpose and vision */}
+      {/* With a photo: purpose, then a wide photo band, then vision offset to
+          the right. Without one: the original two columns. */}
       <Section tone="surface" topRule>
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-            <div className="flex flex-col gap-5">
+          <div
+            className={
+              bandPhoto
+                ? "flex flex-col gap-12 lg:gap-16"
+                : "grid gap-12 lg:grid-cols-2 lg:gap-20"
+            }
+          >
+            <div className="flex max-w-3xl flex-col gap-5">
               <SectionLabel>{dict.sobre.purpose.label}</SectionLabel>
               <GoldHeading as="h2" size="lg">
                 {dict.sobre.purpose.title}
@@ -56,7 +70,15 @@ export default async function SobrePage({ params }: PageProps<"/[lang]/sobre">) 
               </p>
             </div>
 
-            <div className="flex flex-col gap-5">
+            {bandPhoto ? (
+              <BrandPhoto
+                photo={bandPhoto}
+                ratio="21/9"
+                sizes="(min-width: 1280px) 1216px, 94vw"
+              />
+            ) : null}
+
+            <div className={bandPhoto ? "flex max-w-3xl flex-col gap-5 lg:ml-auto" : "flex flex-col gap-5"}>
               <SectionLabel>{dict.sobre.vision.label}</SectionLabel>
               <GoldHeading as="h2" size="lg">
                 {dict.sobre.vision.title}
@@ -91,14 +113,38 @@ export default async function SobrePage({ params }: PageProps<"/[lang]/sobre">) 
       {/* -------------------------------------- O empreendedor por inteiro */}
       <Section tone="surface" topRule>
         <Container className="flex flex-col gap-12">
-          <div className="flex max-w-3xl flex-col gap-5">
-            <SectionLabel>{dict.sobre.whole.label}</SectionLabel>
-            <GoldHeading as="h2" size="xl" variant="gradient">
-              {dict.sobre.whole.title}
-            </GoldHeading>
-            <p className="text-pretty leading-relaxed text-bbn-muted">
-              {dict.sobre.whole.intro}
-            </p>
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <div className="flex max-w-3xl flex-col gap-5">
+              <SectionLabel>{dict.sobre.whole.label}</SectionLabel>
+              <GoldHeading as="h2" size="xl" variant="gradient">
+                {dict.sobre.whole.title}
+              </GoldHeading>
+              <p className="text-pretty leading-relaxed text-bbn-muted">
+                {dict.sobre.whole.intro}
+              </p>
+            </div>
+
+            {/* Mosaic: one tall photo beside two squares. */}
+            {mosaic.length === 3 ? (
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <BrandPhoto
+                  photo={mosaic[0]}
+                  ratio="1/2"
+                  sizes="(min-width: 1280px) 290px, (min-width: 1024px) 23vw, 46vw"
+                  className="row-span-2 aspect-auto h-full"
+                />
+                <BrandPhoto
+                  photo={mosaic[1]}
+                  ratio="1/1"
+                  sizes="(min-width: 1280px) 290px, (min-width: 1024px) 23vw, 46vw"
+                />
+                <BrandPhoto
+                  photo={mosaic[2]}
+                  ratio="1/1"
+                  sizes="(min-width: 1280px) 290px, (min-width: 1024px) 23vw, 46vw"
+                />
+              </div>
+            ) : null}
           </div>
 
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

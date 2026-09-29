@@ -12,6 +12,7 @@ import { Section } from "@/components/brand/Section";
 import { SectionLabel } from "@/components/brand/SectionLabel";
 import { leadershipCycle, pillars } from "@/data/content";
 import { hasValue, site } from "@/data/site";
+import { photo, placements } from "@/data/media";
 import { getDictionary } from "@/dictionaries";
 import { isLocale } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
@@ -46,6 +47,7 @@ export default async function LiderancaPage({
         label={dict.lideranca.hero.label}
         title={dict.lideranca.hero.title}
         intro={dict.lideranca.hero.intro}
+        photo={photo(placements.lideranca.banner, lang)?.publicId}
       />
 
       {/* ---------------------------------------------------------- Structure */}

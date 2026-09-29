@@ -17,6 +17,7 @@ import {
   getPastEvents,
   pastEvents,
 } from "@/data/events";
+import { describePhoto } from "@/data/media";
 import { hasValue } from "@/data/site";
 import { getDictionary, interpolate } from "@/dictionaries";
 import { getEventMedia } from "@/lib/cloudinary";
@@ -69,7 +70,11 @@ export default async function EventDetailPage({
   const dict = await getDictionary(lang);
   const copy = event.i18n[lang];
   // PhotoGrid renders images and short clips together; the lightbox plays both.
-  const media = await getEventMedia(event.cloudinaryFolder);
+  // Catalogued photos get their curated alt text from data/media.ts.
+  const media = (await getEventMedia(event.cloudinaryFolder)).map((item) => ({
+    ...item,
+    alt: describePhoto(item.publicId, lang),
+  }));
 
   const hasVideos = event.videos.length > 0;
   const otherEditions = getPastEvents().filter((other) => other.slug !== event.slug);
