@@ -41,3 +41,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code skill links (local mirror of .agents/skills, which is committed)
+.claude/skills/
